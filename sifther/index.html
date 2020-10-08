@@ -1,7 +1,12 @@
-<div id="observablehq-4b737d6c"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
-const inspect = Inspector.into("#observablehq-4b737d6c");
-(new Runtime).module(define, name => name === "viewof index" ? inspect() : undefined);
-</script>
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="observablehq-4b737d6c"></div>
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
+    const inspect = Inspector.into("#observablehq-4b737d6c");
+    (new Runtime).module(define, name => name === "viewof index" ? inspect() : undefined);
+    </script>
+  </body>
+</html>
