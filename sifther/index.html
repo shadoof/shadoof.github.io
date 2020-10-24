@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <div class="index07"></div>
-    <div class="css"></div>
+    <div class="index04"></div>
+<div class="css"></div>
+<p>Credit: <a href="https://observablehq.com/@shadoof/sifther">sifther by John Cayley</a></p>
 
-    <script type="module">
-      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-      import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
-      (new Runtime).module(define, name => {
-        if (name === "index07") return Inspector.into(".index07")();
-        if (name === "css") return Inspector.into(".css")();
-      });
-    </script>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
+(new Runtime).module(define, name => {
+  if (name === "index04") return Inspector.into(".index04")();
+  if (name === "css") return Inspector.into(".css")();
+});
+</script>
   </body>
 </html>
