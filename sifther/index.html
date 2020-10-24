@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <iframe width="100%" height="246" frameborder="0"
-  src="https://observablehq.com/embed/@shadoof/sifther?cell=index04&cell=css"></iframe>
+    <div class="index07"></div>
+    <div class="css"></div>
+
+    <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
+      (new Runtime).module(define, name => {
+        if (name === "index07") return Inspector.into(".index07")();
+        if (name === "css") return Inspector.into(".css")();
+      });
+    </script>
   </body>
 </html>
