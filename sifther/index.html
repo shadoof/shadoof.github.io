@@ -2,6 +2,7 @@
 <html>
   <body>
   <div class="index"></div>
+<div class="ticker07"></div>
 <div class="css"></div>
 <p>Credit: <a href="https://observablehq.com/@shadoof/sifther">sifther by John Cayley</a></p>
 
@@ -10,7 +11,9 @@ import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/run
 import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
 (new Runtime).module(define, name => {
   if (name === "index") return Inspector.into(".index")();
+  if (name === "ticker07") return Inspector.into(".ticker07")();
   if (name === "css") return Inspector.into(".css")();
 });
-</script>  </body>
+</script>
+  </body>
 </html>
