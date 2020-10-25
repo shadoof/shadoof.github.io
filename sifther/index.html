@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
+  <head>
+   <meta charset="UTF-8">
+  <title>sifther</title>
+ </head>
   <body>
   <div class="index"></div>
 <div class="ticker07"></div>
 <div class="css"></div>
-<p>Credit: <a href="https://observablehq.com/@shadoof/sifther">sifther by John Cayley</a></p>
+<!--<p>Credit: <a href="https://observablehq.com/@shadoof/sifther">sifther by John Cayley</a></p>-->
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -15,5 +19,8 @@ import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
   if (name === "css") return Inspector.into(".css")();
 });
 </script>
+    <style>
+      .ticker07 { color:transparent; }
+    </style>
   </body>
 </html>
