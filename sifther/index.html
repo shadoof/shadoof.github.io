@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html>
   <body>
-  <div id="observablehq-dd1603ac">
-  <div class="observablehq-index04"></div>
-  <div class="observablehq-ticker04"></div>
-  <div class="observablehq-crossfader"></div>
-  <div class="observablehq-css"></div>
-</div>
+  <div class="index"></div>
+<div class="css"></div>
+<p>Credit: <a href="https://observablehq.com/@shadoof/sifther">sifther by John Cayley</a></p>
+
 <script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
-  (new Runtime).module(define, name => {
-    if (name === "index04") return Inspector.into("#observablehq-dd1603ac .observablehq-index04")();
-    if (name === "ticker04") return Inspector.into("#observablehq-dd1603ac .observablehq-ticker04")();
-    if (name === "crossfader") return Inspector.into("#observablehq-dd1603ac .observablehq-crossfader")();
-    if (name === "css") return Inspector.into("#observablehq-dd1603ac .observablehq-css")();
-  });
-</script>
-  </body>
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
+(new Runtime).module(define, name => {
+  if (name === "index") return Inspector.into(".index")();
+  if (name === "css") return Inspector.into(".css")();
+});
+</script>  </body>
 </html>
