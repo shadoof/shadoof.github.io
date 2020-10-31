@@ -1,0 +1,33 @@
+
+  @font-face {
+    font-family: 'AndaleMono';
+    src: url('Andale Mono.ttf');
+  }
+
+  div.sifther {
+    min-height: 90px;
+    padding-top: 30px;
+  }
+
+  .mono {
+    font-family: 'AndaleMono', monospace;
+    font-size: 32px;
+   }
+
+  .overlaid {
+    position: absolute;
+    white-space: pre;
+  }
+
+  .regular {font: 36px 'Minion Pro';}
+
+  .text {
+    color: rgba(0,0,0,0);
+    transition: color 1.5s ease-in-out;
+  }
+
+  .text.visible {
+    color: rgba(0,0,0,255);
+      /* starts readable */
+  }
+  
