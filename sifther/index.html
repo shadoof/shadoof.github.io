@@ -8,7 +8,6 @@
   <body>
   <div class="index"></div>
 <div class="ticker07"></div>
-<div class="css"></div>
 <p><a href="https://observablehq.com/@shadoof/sifther">sifther by John Cayley</a><br/>
     'Proof-of-Concept / Work-in-Progress.<br/>
   Framing and final design to come. (Oct 26, 2020)</p>
@@ -19,11 +18,6 @@ import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
 (new Runtime).module(define, name => {
   if (name === "index") return Inspector.into(".index")();
   if (name === "ticker07") return Inspector.into(".ticker07")();
-  if (name === "css") return Inspector.into(".css")();
 });
-</script>
-    <style>
-      .ticker07 { color:transparent; }
-    </style>
   </body>
 </html>
