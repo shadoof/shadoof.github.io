@@ -11,12 +11,13 @@ div.sifther {
   min-height: 90px;
   min-width: 1280px;
   padding-top: 120px;
-	border: 1px dashed #ffffff;
+  padding-left: 20px;
+  border: 1px dashed #ffffff;
 }
 
 .mono {
   font-family: 'AndaleMono', monospace;
-  font-size: 96px;
+  font-size: 64px;
  }
 
 .overlaid {
