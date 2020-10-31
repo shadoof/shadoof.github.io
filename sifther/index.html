@@ -6,7 +6,10 @@
    <link rel='stylesheet' href='style.css' type='text/css' media='all' />
  </head>
   <body>
-  <div class="index"></div>
+<div class='sifther'>
+  <div class='mono overlaid index07 text'></div>
+  <div class='mono overlaid index07 text visible'>just for a minute</div>
+</div>
 <div class="ticker07"></div>
 <p><a href="https://observablehq.com/@shadoof/sifther">sifther by John Cayley</a><br/>
     'Proof-of-Concept / Work-in-Progress.<br/>
@@ -16,7 +19,6 @@
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
 (new Runtime).module(define, name => {
-  if (name === "index") return Inspector.into(".index")();
   if (name === "ticker07") return Inspector.into(".ticker07")();
 });
   </body>
