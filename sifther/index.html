@@ -7,10 +7,16 @@
  </head>
   <body>
 <div class='sifther'>
-  <div class='mono overlaid index07 text'></div>
-  <div class='mono overlaid index07 text visible'>my<br/>inferiority<br/>shames<br/>me</div>
+  <div class='mono w0 text'></div>
+  <div class='mono w0 text visible'></div>
+  <div class='mono w1 text'></div>
+  <div class='mono w1 text visible'></div>
+  <div class='mono w2 text'></div>
+  <div class='mono w2 text visible'></div>
+  <div class='mono w3 text'></div>
+  <div class='mono w3 text visible'></div>
 </div>
-<div class="ticker07 trans"></div>
+<div class="sifther10 trans"></div>
 <div class="trans">
 <p>sifther by John Cayley<br/>
     'Proof-of-Concept / Work-in-Progress.<br/>
@@ -20,7 +26,7 @@
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
 (new Runtime).module(define, name => {
-  if (name === "ticker07") return Inspector.into(".ticker07")();
+  if (name === "sifther10") return Inspector.into(".sifther10")();
 });
 </script>
   </body>
