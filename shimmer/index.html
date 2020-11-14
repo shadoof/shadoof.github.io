@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+   <title>sifther: our fall 2020</title>
+   <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+ </head>
+  <body>
+<div class='sifther'>
+  <div class='mono w0 text'></div>
+  <div class='mono w0 text visible'>his</div>
+  <div class='mono w1 text'></div>
+  <div class='mono w1 text visible'>rationality</div>
+  <div class='mono w2 text'></div>
+  <div class='mono w2 text visible'>shames</div>
+  <div class='mono w3 text'></div>
+  <div class='mono w3 text visible'>him</div>
+</div>
+<div class="sifther10 trans"></div>
+<div class="trans">
+<p>sifther by John Cayley<br/>
+    'Proof-of-Concept / Work-in-Progress.<br/>
+  Framing and final design to come. (Oct 26, 2020)</p>
+</div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@shadoof/sifther.js?v=3";
+(new Runtime).module(define, name => {
+  if (name === "sifther10") return Inspector.into(".sifther10")();
+});
+</script>
+  </body>
+</html>
