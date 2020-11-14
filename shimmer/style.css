@@ -15,8 +15,9 @@ body {
   min-height: 680px;
   min-width: 1280px;
   width: 1280px;
-  margin-left: 40px;
-  margin-right: 28px;
+  margin-top: 40px;
+  margin-left: 200px;
+  margin-right: 160px;
   text-align: center;
   /*padding-top: 60px;
   padding-left: 300px;
@@ -26,7 +27,7 @@ body {
 .mono {
   color: rgba(255,255,255,255);
   font-family: 'AndaleMono', monospace;
-  font-size: 56px;
+  font-size: 36px;
  }
 
 .trans { color:transparent; }
