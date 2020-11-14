@@ -8,7 +8,7 @@ body {
   cursor: none;
 }
 
-.sifther {
+.shimmer {
   position: relative;
   min-height: 680px;
   min-width: 1280px;
@@ -18,8 +18,9 @@ body {
 }
 
 .mono {
+  color: rgba(255,255,255,255);
   font-family: 'AndaleMono', monospace;
-  font-size: 128px;
+  font-size: 64px;
   white-space: pre;
  }
 
