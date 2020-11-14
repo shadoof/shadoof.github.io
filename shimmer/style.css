@@ -21,7 +21,6 @@ body {
   color: rgba(255,255,255,255);
   font-family: 'AndaleMono', monospace;
   font-size: 64px;
-  white-space: pre;
  }
 
 .overlaid {
