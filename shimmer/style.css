@@ -12,6 +12,7 @@ body {
   position: relative;
   min-height: 680px;
   min-width: 1280px;
+  width: 1280px;
   /*padding-top: 60px;
   padding-left: 300px;
   border: 1px dashed #ffffff;*/
