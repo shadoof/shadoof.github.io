@@ -9,6 +9,7 @@
     <div class='shimmer mono'>
       <div class="shimmerEmbeddable">test text</div>
     </div>
+    <div class="ticker trans"></div>
     <div class="trans">
     <p>shimmer by John Cayley<br/>
       Nov 14, 2020)</p>
@@ -17,6 +18,7 @@
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
     import define from "https://api.observablehq.com/@shadoof/shimmer.js?v=3";
     (new Runtime).module(define, name => {
+      if (name === "ticker") return Inspector.into(".ticker")();
       if (name === "shimmerEmbeddable") return Inspector.into(".shimmerEmbeddable")();
     });
     </script>
