@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'AndaleMono';
+  src: url('AndaleMono.ttf');
+}
+
+body {
+  background-color: #000;
+  cursor: none;
+}
+
+.sifther {
+  position: relative;
+  min-height: 680px;
+  min-width: 1280px;
+  /*padding-top: 60px;
+  padding-left: 300px;
+  border: 1px dashed #ffffff;*/
+}
+
+.mono {
+  font-family: 'AndaleMono', monospace;
+  font-size: 128px;
+  white-space: pre;
+ }
+
+.overlaid {
+  position: absolute;
+  white-space: pre;
+}
+
+.regular {font: 36px 'Minion Pro';}
+
+.text {
+  color: rgba(255,255,255,0);
+  transition: color 1.5s ease-in-out;
+}
+
+.text.visible {
+  color: rgba(255,255,255,255);
+    /* starts readable */
+}
+
+.w0 {
+  position: absolute;
+  top: 20px;
+  left: 220px;
+}
+
+.w1 {
+  position: absolute;
+  top: 180px;
+  left: 220px;
+}
+
+.w2 {
+  position: absolute;
+  top: 340px;
+  left: 220px;
+}
+
+.w3 {
+  position: absolute;
+  top: 500px;
+  left: 220px;
+}
+
+.trans { color:transparent; }
