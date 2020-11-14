@@ -6,9 +6,9 @@
 body {
   background-color: #000;
   cursor: none;
-  width: 1280;
+  min-width: 1280;
   overflow: hidden;
-  /*border: 1px dashed #ffffff;*/
+  border: 1px dashed #ffffff;
 }
 
 .shimmer {
@@ -17,7 +17,7 @@ body {
   width: 960px;
   text-align: center;
   margin-top: 80px;
-  margin-left: 260px;
+  margin-left: 240px;
   /*border: 1px dashed #ff0000;*/
 }
 
