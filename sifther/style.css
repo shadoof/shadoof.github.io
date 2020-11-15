@@ -6,15 +6,16 @@
 body {
   background-color: #000;
   cursor: none;
+  overdlow: hidden;
 }
 
 .sifther {
   position: relative;
   min-height: 680px;
-  min-width: 1280px;
+  min-width: 1024px;
   /*padding-top: 60px;
-  padding-left: 300px;
-  border: 1px dashed #ffffff;*/
+  padding-left: 300px;*/
+  /*border: 1px dashed #ffffff;*/
 }
 
 .mono {
