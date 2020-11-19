@@ -12,11 +12,13 @@ body {
 
 .shimmer {
   position: relative;
-  min-width: 960px;
-  max-width: 960px;
+  /*min-width: 960px;*/
+  max-width: 980px;
   margin: auto;
   margin-top: 80px;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
   /*min-height: 680px;*/
   /*border: 1px dashed #ff0000;*/
 }
@@ -24,7 +26,8 @@ body {
 .mono {
   color: rgba(255,255,255,255);
   font-family: 'AndaleMono', monospace;
-  font-size: 44px;
+  /*font-size: 44px;*/
+  font-size: 3.15vw;
  }
 
 .trans { color:transparent; }
