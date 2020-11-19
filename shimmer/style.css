@@ -17,7 +17,7 @@ body {
   margin: auto;
   margin-top: 80px;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
   /*min-height: 680px;*/
@@ -27,7 +27,7 @@ body {
 .mono {
   color: rgba(255,255,255,255);
   font-family: 'AndaleMono', monospace;
-  /*font-size: 44px;*/
+  font-size: 44px;
   font-size: 3.15vw;
  }
 
