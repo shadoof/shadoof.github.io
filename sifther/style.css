@@ -13,7 +13,7 @@ body {
   position: relative;
   max-width: 1024px;
   min-height: 720px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   /*padding-top: 60px;*/
   /*padding-left: 300px;*/
   /*border: 1px dashed #ffffff;*/
@@ -23,7 +23,7 @@ body {
   font-family: 'AndaleMono', monospace;
   white-space: pre;
   font-size: 128px;
-  font-size: 9vw;
+  font-size: 10vw;
  }
 
 .overlaid {
@@ -47,7 +47,7 @@ body {
   position: absolute;
   top: 20px;
   left: 220px;
-  top: 3vh;
+  top: 5vh;
   left: 18vw;
 }
 
@@ -63,7 +63,7 @@ body {
   position: absolute;
   top: 340px;
   left: 220px;
-  top: 50vh;
+  top: 45vh;
   left: 18vw;
 }
 
@@ -71,7 +71,7 @@ body {
   position: absolute;
   top: 500px;
   left: 220px;
-  top: 75vh;
+  top: 65vh;
   left: 18vw;
 }
 
