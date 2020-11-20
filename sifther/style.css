@@ -11,17 +11,19 @@ body {
 
 .sifther {
   position: relative;
-  min-height: 680px;
-  min-width: 1024px;
-  /*padding-top: 60px;
-  padding-left: 300px;*/
+  max-width: 1024px;
+  min-height: 720px;
+  padding-bottom: 20px;
+  /*padding-top: 60px;*/
+  /*padding-left: 300px;*/
   /*border: 1px dashed #ffffff;*/
 }
 
 .mono {
   font-family: 'AndaleMono', monospace;
-  font-size: 128px;
   white-space: pre;
+  font-size: 128px;
+  font-size: 9vw;
  }
 
 .overlaid {
@@ -45,24 +47,32 @@ body {
   position: absolute;
   top: 20px;
   left: 220px;
+  top: 3vh;
+  left: 18vw;
 }
 
 .w1 {
   position: absolute;
   top: 180px;
   left: 220px;
+  top: 25vh;
+  left: 18vw;
 }
 
 .w2 {
   position: absolute;
   top: 340px;
   left: 220px;
+  top: 50vh;
+  left: 18vw;
 }
 
 .w3 {
   position: absolute;
   top: 500px;
   left: 220px;
+  top: 75vh;
+  left: 18vw;
 }
 
 .trans { color:transparent; }
