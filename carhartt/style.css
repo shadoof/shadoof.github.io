@@ -13,6 +13,10 @@ body {
 	position: relative;
 	max-width: 1024px;
 	min-height: 720px;
+	padding-top: 100px;
+	padding-top: 11vw;
+	padding-left: 160px;
+	padding-top: 18vw;
 }
 
 .mono {
