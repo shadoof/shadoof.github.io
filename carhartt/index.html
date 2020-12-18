@@ -25,7 +25,7 @@
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@shadoof/carhartt.js?v=3";
 (new Runtime).module(define, name => {
-  if (name === "sifther10") return Inspector.into(".loop")();
+  if (name === "loop") return Inspector.into(".loop")();
 });
 </script>
   </body>
