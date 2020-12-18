@@ -7,16 +7,15 @@ body {
   background-color: #000;
   cursor: none;
   overflow: hidden;
+	padding-top: 80px;
+	padding-top: 10vw;
+	padding-left: 100px;
+	padding-left: 12vw;
 }
 
 .quatrain {
 	position: relative;
 	max-width: 1024px;
-	min-height: 720px;
-	padding-top: 100px;
-	padding-top: 11vw;
-	padding-left: 160px;
-	padding-top: 18vw;
 }
 
 .mono {
