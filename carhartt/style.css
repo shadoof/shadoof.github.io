@@ -194,3 +194,7 @@ body {
 }
 
 .trans { color:transparent; }
+
+img {
+	border: 1px solid #d80e0e;
+}
