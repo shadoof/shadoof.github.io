@@ -9,7 +9,7 @@
 	<body>
 	<div class="title"></div>
 	<div class="bodytext"></div>
-  <!--<div class="animateTitle trans"></div>-->
+	<div class="animateTitle trans"></div>
 	<p>Credit: <a href="https://observablehq.com/@dla/adlaoutpost">adlaoutpost by Digital Language Art</a></p>
 	</body>
 <script type="module">
@@ -18,7 +18,7 @@ import define from "https://api.observablehq.com/@dla/adlaoutpost.js?v=3";
 (new Runtime).module(define, name => {
   if (name === "title") return Inspector.into(".title")();
   if (name === "bodytext") return Inspector.into(".bodytext")();
-//	if (name === "animateTitle") return Inspector.into(".animateTitle")();
+  if (name === "animateTitle") return Inspector.into(".animateTitle")();
 });
 </script>
 </html>
