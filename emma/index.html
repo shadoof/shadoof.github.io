@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Emma</title>
+		<style>
+			.trans { color:transparent; }
+		</style>
+	</head>
+	<body>
+<div id="observablehq-title-fbd2dd9f"></div>
+<div id="observablehq-bodytext-fbd2dd9f"></div>
+<p>Credit: <a href="https://observablehq.com/@dla/tapeworm-memory-an-animated-sestina">Tapeworm Memory: an animated sestina by Digital Language Art</a></p>
+	</body>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@dla/tapeworm-memory-an-animated-sestina.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-fbd2dd9f"));
+  if (name === "bodytext") return new Inspector(document.querySelector("#observablehq-bodytext-fbd2dd9f"));
+});
+</script></html>
