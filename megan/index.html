@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Megan</title>
+		<style>
+			.trans { color:transparent; }
+		</style>
+	</head>
+	<body>
+<div id="observablehq-title-9d0e8ddd"></div>
+<div id="observablehq-response-9d0e8ddd"></div>
+<div id="observablehq-viewof-input-9d0e8ddd"></div>
+<p>Credit: <a href="https://observablehq.com/@dla/boot">Boot by Digital Language Art</a></p>
+	</body>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@dla/boot.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-9d0e8ddd"));
+  if (name === "response") return new Inspector(document.querySelector("#observablehq-response-9d0e8ddd"));
+  if (name === "viewof input") return new Inspector(document.querySelector("#observablehq-viewof-input-9d0e8ddd"));
+  return ["nextScene"].includes(name);
+});
+</script></html>
