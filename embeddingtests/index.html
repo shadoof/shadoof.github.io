@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Embedding Tests</title>
+		<style>
+			.trans { color:transparent; }
+		</style>
+	</head>
+	<body>
+<div id="observablehq-verse-a2024de9"></div>
+	</body>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@dla/embedding-tests.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "verse") return new Inspector(document.querySelector("#observablehq-verse-a2024de9"));
+});
+</script>
+</html>
