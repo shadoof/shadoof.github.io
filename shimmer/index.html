@@ -6,21 +6,17 @@
    <link rel='stylesheet' href='style.css' type='text/css' media='all' />
   </head>
   <body>
-    <div class="shimmerEmbeddable shimmer mono"></div>
-    <div class="ticker trans"></div>
-    <div class="swell trans"></div>
-    <div class="trans">
-    <p>shimmer by John Cayley<br/>
-      Nov 14, 2020)</p>
-    </div>
-    <script type="module">
+    <div id="observablehq-shimmerEmbeddable-fb4d202e" class="shimmer mono"></div>
+    <div id="observablehq-swell-fb4d202e" class="swell trans"></div>
+  </body>
+
+  <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
     import define from "https://api.observablehq.com/@shadoof/shimmer.js?v=3";
-    (new Runtime).module(define, name => {
-      if (name === "ticker") return Inspector.into(".ticker")();
-      if (name === "shimmerEmbeddable") return Inspector.into(".shimmerEmbeddable")();
-      if (name === "swell") return Inspector.into(".swell")();
+    new Runtime().module(define, name => {
+      if (name === "shimmerEmbeddable") return new Inspector(document.querySelector("#observablehq-shimmerEmbeddable-fb4d202e"));
+      if (name === "swell") return new Inspector(document.querySelector("#observablehq-swell-fb4d202e"));
+      return ["shimmerer","ticker"].includes(name);
     });
-    </script>
-  </body>
+  </script>
 </html>

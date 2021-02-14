@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>What is a Book?</title>
+		<style>
+		  @font-face {
+		    font-family: 'AndaleMono';
+  			src: url('AndaleMono.ttf');
+		  }
+		  .textcontainer {
+		    position: relative;
+		    min-height: 300px;
+		    font-family: 'AndaleMono', monospace;
+		    font-size: 18px;
+		    font-size: 3vw;
+		  }
+		  .text {
+		    position: absolute;
+		    color: rgba(0,0,0,0);
+		    transition: color 1s ease-in-out;
+		  }
+		  .text.visible {
+		    color: rgba(0,0,0,255);
+		  }
+			.trans { color:transparent; }
+		</style>
+	</head>
+	<body>
+		<div class="textcontainer"></div>
+		<div class="play trans"></div>
+	</body>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@dla/scoring-air.js?v=3";
+(new Runtime).module(define, name => {
+  if (name === "play") return Inspector.into(".play")();
+  if (name === "textcontainer") return Inspector.into(".textcontainer")();
+});
+</script>
+</html>
