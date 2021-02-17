@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<title>while wishing</title>
+	
+	<link rel='stylesheet' href='style.css' type='text/css' media='all' />
+</head>
+<body>
+	<div id="observablehq-textcontainer-e21e8904"></div>
+	
+	<div id="observablehq-play-e21e8904" class="trans"></div>
+
+<script type="module">
+import {
+	Runtime,
+	Inspector
+}
+
+from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@shadoof/while-wishing-this-was-someone-elses-dream.js?v=3";
+new Runtime().module(define,
+	name => {
+	if (name === "textcontainer") return new Inspector(document.querySelector("#observablehq-textcontainer-e21e8904"));
+	if (name === "play") return new Inspector(document.querySelector("#observablehq-play-e21e8904"));
+});
+</script>
+</body>
+</html>
