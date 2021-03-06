@@ -8,6 +8,7 @@ body {
 	cursor: none;
 	overflow: hidden;
   /*border: 1px dashed #ffffff;*/
+  padding-top: 8px;
 }
 
 .textcontainer {
