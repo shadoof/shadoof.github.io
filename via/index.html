@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>-WRITING &nbsp;/&nbsp; +LANGUAGE</title>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/diff.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="menu">
+  <div id="prev" class="button" title="previous page">&lt;&lt;</div>
+  <div class="custom-select"><select></select>
+  </div>
+  <div id="next" class="button" title="next page">&gt;&gt;</div>
+</div>
+<div id="template">
+  <div class="page">
+      <div class="adiv">
+          <span class="tb"></span>
+      </div>
+      <div class="bdiv">
+          <span class="tb"></span>
+      </div>
+  </div>
+  </div>
+<div id="overlayContentBefore">
+
+</div>
+<div id="overlay">
+  <p>
+  <span id="beforeAnchorA"></span>
+  <span id="anchor" class="anchor"></span>
+  <span id="afterAnchorA"></span>
+  <div id="beforeAnchorB"></div>
+  <div id="afterAnchorB"></div>
+  </p>
+</div>
+<div id="overlayContentAfter">
+
+</div>
+
+<div id="getTextWidth">
+</div>
+<div id="vianext" onclick="goNext()">></div>
+<script type="text/javascript">
+(function() {
+var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+link.type = 'image/x-icon';
+link.rel = 'shortcut icon';
+link.href = 'favicon.ico';
+document.getElementsByTagName('head')[0].appendChild(link);
+})();
+</script>
+<script src="js/context.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/ui.js"></script>
+</body>
+
+</html>
