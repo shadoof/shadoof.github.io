@@ -10,6 +10,7 @@
 <body>
 <div id="observablehq-textcontainer-5f754356"></div>
 <div id="observablehq-play-5f754356" class="trans"></div>
+<div id="observablehq-verseSpans-5f754356" class="trans"></div>
 <p>Credit: <a href="https://observablehq.com/@shadoof/while-wishing-this-was-someone-elses-dream">While wishing this was someone else’s dream by John Cayley</a></p>
 
 <script type="module">
@@ -18,6 +19,8 @@ import define from "https://api.observablehq.com/@shadoof/while-wishing-this-was
 new Runtime().module(define, name => {
   if (name === "textcontainer") return new Inspector(document.querySelector("#observablehq-textcontainer-5f754356"));
   if (name === "play") return new Inspector(document.querySelector("#observablehq-play-5f754356"));
+  if (name === "verseSpans") return new Inspector(document.querySelector("#observablehq-verseSpans-5f754356"));
+  return ["offsets","spans"].includes(name);
 });
 </script>
 </body>
