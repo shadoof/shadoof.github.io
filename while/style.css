@@ -14,7 +14,7 @@ body {
 .textcontainer {
 	position: relative;
 	cursor: none;
-	min-height: 300px;
+	min-height: 480px;
 	font-family: Perptua, serif;
 	font-size: 3vw;
 	line-height: 1.1;
@@ -22,6 +22,7 @@ body {
 }
 
 .text {
+	position: absolute;
 	color: rgba(255,255,255,0);
 	transition: color 2s ease-in-out;
 }
