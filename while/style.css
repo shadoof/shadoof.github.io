@@ -41,4 +41,6 @@ body {
 
 .trans {
 	color: transparent;
+	max-height: 4px;
+	overflow: hidden;
 }
