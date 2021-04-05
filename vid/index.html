@@ -7,21 +7,24 @@
 	
 </head>
 <body>
-<div id="observablehq-playEmbeddable-6ffaeeaf"></div>
-<div id="observablehq-videoElem-6ffaeeaf"></div>
-<div id="observablehq-vidcss-6ffaeeaf"></div>
+<div id="observablehq-verseSpanned-1ffb14e2"></div>
+<div id="observablehq-playEmbeddable-1ffb14e2"></div>
+<div id="observablehq-videoElem-1ffb14e2"></div>
+<div id="observablehq-vidcss-1ffb14e2"></div>
 <p>Credit: <a href="https://observablehq.com/@shadoof/stts-video">Scoring the Typographic Surfacewith Video by John Cayley</a></p>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@shadoof/stts-video.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "playEmbeddable") return new Inspector(document.querySelector("#observablehq-playEmbeddable-6ffaeeaf"));
-  if (name === "videoElem") return new Inspector(document.querySelector("#observablehq-videoElem-6ffaeeaf"));
-  if (name === "vidcss") return new Inspector(document.querySelector("#observablehq-vidcss-6ffaeeaf"));
+  if (name === "verseSpanned") return new Inspector(document.querySelector("#observablehq-verseSpanned-1ffb14e2"));
+  if (name === "playEmbeddable") return new Inspector(document.querySelector("#observablehq-playEmbeddable-1ffb14e2"));
+  if (name === "videoElem") return new Inspector(document.querySelector("#observablehq-videoElem-1ffb14e2"));
+  if (name === "vidcss") return new Inspector(document.querySelector("#observablehq-vidcss-1ffb14e2"));
+  return ["offsets","makeSpans","loop","play"].includes(name);
 });
 </script>
-</body>
+	</body>
 
 </html>
 
