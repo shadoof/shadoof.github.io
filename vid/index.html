@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<title>video</title>
+	
+</head>
+<body>
+<div id="observablehq-playEmbeddable-6ffaeeaf"></div>
+<div id="observablehq-videoElem-6ffaeeaf"></div>
+<div id="observablehq-vidcss-6ffaeeaf"></div>
+<p>Credit: <a href="https://observablehq.com/@shadoof/stts-video">Scoring the Typographic Surfacewith Video by John Cayley</a></p>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@shadoof/stts-video.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "playEmbeddable") return new Inspector(document.querySelector("#observablehq-playEmbeddable-6ffaeeaf"));
+  if (name === "videoElem") return new Inspector(document.querySelector("#observablehq-videoElem-6ffaeeaf"));
+  if (name === "vidcss") return new Inspector(document.querySelector("#observablehq-vidcss-6ffaeeaf"));
+});
+</script>
+</body>
+
+</html>
+
