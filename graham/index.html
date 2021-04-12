@@ -7,14 +7,19 @@
 		</style>
 	</head>
 	<body>
-<div id="observablehq-pathoReader-6784fb5f"></div>
-<p>Credit: <a href="https://observablehq.com/@shadoof/graham">For the Love of the Cosmos Help Us, Chapter 1 by John Cayley</a></p>
+<div id="observablehq-pathoReader-40b9bd38"></div>
+<div id="observablehq-viewof-readerControls-40b9bd38"></div>
+<div id="observablehq-css-40b9bd38"></div>
+<p>Credit: <a href="https://observablehq.com/@shadoof/for-the-love-of-the-cosmos-help-us-chapter-1">For the Love of the Cosmos Help Us, Chapter 1 by John Cayley</a></p>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@shadoof/graham.js?v=3";
+import define from "https://api.observablehq.com/@shadoof/for-the-love-of-the-cosmos-help-us-chapter-1.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "pathoReader") return new Inspector(document.querySelector("#observablehq-pathoReader-6784fb5f"));
+  if (name === "pathoReader") return new Inspector(document.querySelector("#observablehq-pathoReader-40b9bd38"));
+  if (name === "viewof readerControls") return new Inspector(document.querySelector("#observablehq-viewof-readerControls-40b9bd38"));
+  if (name === "css") return new Inspector(document.querySelector("#observablehq-css-40b9bd38"));
+  return ["textToBeTyped","readerControls","typewriter"].includes(name);
 });
 </script>
 	</body>
