@@ -4,21 +4,24 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Florence</title>
 		<style>
-			.trans { color:transparent; }
+			.trans { display:none; }
 		</style>
 	</head>
 	<body>
-<div id="observablehq-title-cc0bab49"></div>
-<div id="observablehq-mdtext-cc0bab49"></div>
-<p>Credit: <a href="https://observablehq.com/@dla/cream">cream by Digital Language Art</a></p>
-	</body>
+<div id="observablehq-verseSpanned-7b66a575" class="trans"></div>
+<div id="observablehq-css-7b66a575" class="trans"></div>
+<div id="observablehq-emeSal-7b66a575"></div>
+<div id="observablehq-viewof-pressToPlay-7b66a575"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@dla/cream.js?v=3";
+import define from "https://api.observablehq.com/@shadoof/eme-sal/2.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-cc0bab49"));
-  if (name === "mdtext") return new Inspector(document.querySelector("#observablehq-mdtext-cc0bab49"));
-  return ["array365"].includes(name);
+  if (name === "verseSpanned") return new Inspector(document.querySelector("#observablehq-verseSpanned-7b66a575"));
+  if (name === "css") return new Inspector(document.querySelector("#observablehq-css-7b66a575"));
+  if (name === "emeSal") return new Inspector(document.querySelector("#observablehq-emeSal-7b66a575"));
+  if (name === "viewof pressToPlay") return new Inspector(document.querySelector("#observablehq-viewof-pressToPlay-7b66a575"));
+  return ["composedWordsWithUnitNums","matchAlignedWordsToComposed","findMissing","testAllWordsMatch"].includes(name);
 });
-</script></html>
+</script>
+</html>
