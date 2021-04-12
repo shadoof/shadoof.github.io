@@ -8,19 +8,22 @@
 	<link rel='stylesheet' href='style.css' type='text/css' media='all' />
 </head>
 <body>
-<div id="observablehq-textcontainer-38ce4044"></div>
-<div id="observablehq-playembedded-38ce4044" class="trans"></div>
-<div id="observablehq-play-38ce4044" class="trans"></div>
+<div id="observablehq-textcontainer-4d69cf23"></div>
+<div id="observablehq-playembedded-4d69cf23" class="trans"></div>
+<div id="observablehq-play-4d69cf23" class="trans"></div>
+<div id="observablehq-spans-4d69cf23" class="trans"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@shadoof/while-wishing-this-was-someone-elses-dream.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "textcontainer") return new Inspector(document.querySelector("#observablehq-textcontainer-38ce4044"));
-  if (name === "playembedded") return new Inspector(document.querySelector("#observablehq-playembedded-38ce4044"));
-  if (name === "play") return new Inspector(document.querySelector("#observablehq-play-38ce4044"));
+  if (name === "textcontainer") return new Inspector(document.querySelector("#observablehq-textcontainer-4d69cf23"));
+  if (name === "playembedded") return new Inspector(document.querySelector("#observablehq-playembedded-4d69cf23"));
+  if (name === "play") return new Inspector(document.querySelector("#observablehq-play-4d69cf23"));
+  if (name === "spans") return new Inspector(document.querySelector("#observablehq-spans-4d69cf23"));
 });
-</script></body>
+</script>
+</body>
 
 </html>
 
