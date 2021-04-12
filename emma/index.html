@@ -9,7 +9,14 @@
 </head>
 <body>
 <div id="observablehq-view-e6239e4a"></div>
-<div id="observablehq-css-e6239e4a" class="trans"></div>
+<div id="observablehq-css-e6239e4a"></div>
+<div id="observablehq-init-e6239e4a"></div>
+<div id="observablehq-nextStep-e6239e4a"></div>
+<div id="observablehq-renderStep-e6239e4a"></div>
+<div id="observablehq-bindEvents-e6239e4a"></div>
+<div id="observablehq-currentScene-e6239e4a"></div>
+<div id="observablehq-currentText-e6239e4a"></div>
+<div id="observablehq-story-e6239e4a"></div>
 <p>Credit: <a href="https://observablehq.com/@emmatcapps/interactive-story-new-code-attempt-03-22-2021">Interactive Story: new code attempt 03/22/2021 by Emma T Capps</a></p>
 
 <script type="module">
@@ -18,7 +25,13 @@ import define from "https://api.observablehq.com/@emmatcapps/interactive-story-n
 new Runtime().module(define, name => {
   if (name === "view") return new Inspector(document.querySelector("#observablehq-view-e6239e4a"));
   if (name === "css") return new Inspector(document.querySelector("#observablehq-css-e6239e4a"));
-  return ["nextStep","renderStep","bindEvents","init"].includes(name);
+  if (name === "init") return new Inspector(document.querySelector("#observablehq-init-e6239e4a"));
+  if (name === "nextStep") return new Inspector(document.querySelector("#observablehq-nextStep-e6239e4a"));
+  if (name === "renderStep") return new Inspector(document.querySelector("#observablehq-renderStep-e6239e4a"));
+  if (name === "bindEvents") return new Inspector(document.querySelector("#observablehq-bindEvents-e6239e4a"));
+  if (name === "currentScene") return new Inspector(document.querySelector("#observablehq-currentScene-e6239e4a"));
+  if (name === "currentText") return new Inspector(document.querySelector("#observablehq-currentText-e6239e4a"));
+  if (name === "story") return new Inspector(document.querySelector("#observablehq-story-e6239e4a"));
 });
 </script>
 </html>
