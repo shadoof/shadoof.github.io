@@ -3,21 +3,21 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Graham</title>
 		<style>
-			.trans { color:transparent; }
+			.trans { display:none; }
 		</style>
 	</head>
 	<body>
-<div id="observablehq-pathoReader-40b9bd38"></div>
-<div id="observablehq-viewof-readerControls-40b9bd38"></div>
-<div id="observablehq-css-40b9bd38"></div>
+<div id="observablehq-pathoReader-52679c42"></div>
+<div id="observablehq-viewof-readerControls-52679c42"></div>
+<div id="observablehq-css-52679c42" class="trans"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@shadoof/for-the-love-of-the-cosmos-help-us-chapter-1.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "pathoReader") return new Inspector(document.querySelector("#observablehq-pathoReader-40b9bd38"));
-  if (name === "viewof readerControls") return new Inspector(document.querySelector("#observablehq-viewof-readerControls-40b9bd38"));
-  if (name === "css") return new Inspector(document.querySelector("#observablehq-css-40b9bd38"));
+  if (name === "pathoReader") return new Inspector(document.querySelector("#observablehq-pathoReader-52679c42"));
+  if (name === "viewof readerControls") return new Inspector(document.querySelector("#observablehq-viewof-readerControls-52679c42"));
+  if (name === "css") return new Inspector(document.querySelector("#observablehq-css-52679c42"));
   return ["textToBeTyped","readerControls","typewriter"].includes(name);
 });
 </script>
