@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Emma</title>
-	<style>
+<style>
 html, body {
   margin:0;
   padding:0;
@@ -21,7 +21,7 @@ html, body {
   margin:2px;
   display:inline-block;
   flex:1 1;
-  height:380px;
+  height:310px;
   overflow:hidden;
   position:relative;
 }
@@ -93,34 +93,34 @@ html, body {
   width:0;
 }
 
-		.trans { display:none; }
-	</style>
-</head>
-<body>
-<div id="observablehq-view-e6239e4a"></div>
-<div id="observablehq-css-e6239e4a" class="trans"></div>
-<div id="observablehq-init-e6239e4a" class="trans"></div>
-<div id="observablehq-nextStep-e6239e4a" class="trans"></div>
-<div id="observablehq-renderStep-e6239e4a" class="trans"></div>
-<div id="observablehq-bindEvents-e6239e4a" class="trans"></div>
-<div id="observablehq-currentScene-e6239e4a" class="trans"></div>
-<div id="observablehq-currentText-e6239e4a" class="trans"></div>
-<div id="observablehq-story-e6239e4a" class="trans"></div>
-<p>Credit: <a href="https://observablehq.com/@emmatcapps/interactive-story-new-code-attempt-03-22-2021">Interactive Story: new code attempt 03/22/2021 by Emma T Capps</a></p>
+.none {
+  display: none;
+}
 
+</style>
+</head>
+<body style="background-color: black; color: ivory;">
+<div style="position: relative; top: 2vw; left: 5vw;">
+<h2>Douglas and the Deluge</h2>
+<h3>an interactive comic by Emma T Capps</h3>
+
+<!--Notebook cells here:-->
+  <div id="observablehq-view-8dcb97a9"></div>
+  <div id="observablehq-start-8dcb97a9" class="none"></div>
+<!--End of notebook cells-->
+
+</div>
+<!--Notebook script here:-->
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@emmatcapps/interactive-story-new-code-attempt-03-22-2021.js?v=3";
+import define from "https://api.observablehq.com/@shadoof/emma2_0.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "view") return new Inspector(document.querySelector("#observablehq-view-e6239e4a"));
-  if (name === "css") return new Inspector(document.querySelector("#observablehq-css-e6239e4a"));
-  if (name === "init") return new Inspector(document.querySelector("#observablehq-init-e6239e4a"));
-  if (name === "nextStep") return new Inspector(document.querySelector("#observablehq-nextStep-e6239e4a"));
-  if (name === "renderStep") return new Inspector(document.querySelector("#observablehq-renderStep-e6239e4a"));
-  if (name === "bindEvents") return new Inspector(document.querySelector("#observablehq-bindEvents-e6239e4a"));
-  if (name === "currentScene") return new Inspector(document.querySelector("#observablehq-currentScene-e6239e4a"));
-  if (name === "currentText") return new Inspector(document.querySelector("#observablehq-currentText-e6239e4a"));
-  if (name === "story") return new Inspector(document.querySelector("#observablehq-story-e6239e4a"));
+  if (name === "view") return new Inspector(document.querySelector("#observablehq-view-8dcb97a9"));
+  if (name === "start") return new Inspector(document.querySelector("#observablehq-start-8dcb97a9"));
+  return ["nextStep","renderStep","bindEvents","init"].includes(name);
 });
 </script>
+<!--End of notebook script-->
+
+</body>
 </html>
