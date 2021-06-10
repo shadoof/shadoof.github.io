@@ -11,7 +11,7 @@ body {
   padding-top: 8px;
 }
 
-.textcontainer {
+.verse {
 	position: relative;
 	cursor: none;
 	min-height: 480px;
@@ -41,4 +41,8 @@ body {
 
 .trans {
 	color: transparent;
+}
+
+.none {
+	display: none;
 }
