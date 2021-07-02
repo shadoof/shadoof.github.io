@@ -19,7 +19,6 @@ span {
 }
 
 #display {
-  max-height: 17em;
   background-color: #00ffff; /* light sky blue: #e1f8fa */
   color: #000000;
   opacity: 1;
