@@ -6,13 +6,20 @@
    <link rel='stylesheet' href='style.css' type='text/css' media='all' />
   </head>
   <body>
-    <div id="observablehq-display-6318a997"></div>
+<div id="frame">
+  <div id="display" class="container"></div>
+</div>
+  
+<div id="observablehq-run-6b9ee4f9" class="none"></div>
+<div id="observablehq-waveForm-6b9ee4f9" class="none"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@shadoof/breathe.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "display") return new Inspector(document.querySelector("#observablehq-display-6318a997"));
+  if (name === "run") return new Inspector(document.querySelector("#observablehq-run-6b9ee4f9"));
+  if (name === "waveForm") return new Inspector(document.querySelector("#observablehq-waveForm-6b9ee4f9"));
+  return ["breathe","waveFormer","cycle"].includes(name);
 });
 </script>
 
