@@ -4,10 +4,7 @@
 }
 
 body {
-  background-color: #00ffff;
   cursor: none;
-  overflow: hidden;
-  /*border: 1px dashed #ffffff;*/
 }
 
 span {
@@ -15,27 +12,29 @@ span {
 }
 
 #frame {
-  position: relative;
-  min-width:  100vw;
+  position: absolute;
+  min-width:  140vw;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-51%);
   border: none;
   padding:  none;
   overflow: hidden;
 }
 
 #display {
+  min-width:  140vw;
+  min-height: calc(100vw * 9 / 16);
   background-color: #00ffff; /* light sky blue: #e1f8fa */
   color: #000000;
   opacity: 1;
-  margin-left: -52%;
-  margin-right: -48%;
-  min-height: calc(100vw * 9 / 16);
   font-family: 'AndaleMono', monospace;
   font-size: 2.5vw;
-  overflow: hidden;
   white-space: break-spaces;
   text-align: center;
   border: none;
   padding: none;
+  overflow: hidden;
 }
 
 .none {
