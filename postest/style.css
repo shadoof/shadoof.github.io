@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'AndaleMono';
+  src: url('AndaleMono.ttf');
+}
+
+body {
+  background-color: #00ffff;
+  cursor: none;
+  overflow: hidden;
+  /*border: 1px dashed #ffffff;*/
+}
+
+span {
+  transition: text-shadow 1s ease; /* -in-out */
+}
+
+#frame {
+  position: relative;
+  min-width:  100vw;
+  border: none;
+  padding:  none;
+  overflow: hidden;
+}
+
+#display {
+  background-color: #00ffff; /* light sky blue: #e1f8fa */
+  color: #000000;
+  opacity: 1;
+  margin-left: -52%;
+  margin-right: -48%;
+  min-height: calc(100vw * 9 / 16);
+  font-family: 'AndaleMono', monospace;
+  font-size: 2.5vw;
+  overflow: hidden;
+  white-space: break-spaces;
+  text-align: center;
+  border: none;
+  padding: none;
+}
+
+.none {
+  display: none;
+}
