@@ -16,15 +16,26 @@ span {
 
 #frame {
   position: relative;
-  margin-left: -50%;
-  margin-right: -50%;
+  margin-left: -51.5%;
+  margin-right: -48.5%;
   overflow: hidden;
 }
 
 #display {
+  min-width:  140vw;
+  margin-left:  -49%;
+  margin-right: -51%;
+  min-height: calc(100vw * 9 / 16);
   background-color: #00ffff; /* light sky blue: #e1f8fa */
   color: #000000;
   opacity: 1;
+  font-family: 'AndaleMono', monospace;
+  font-size: 2.5vw;
+  white-space: break-spaces;
+  text-align: center;
+  border: none;
+  padding: none;
+  overflow: hidden;
 }
 
 #underlay {
@@ -33,17 +44,6 @@ span {
   max-height: 17em;
   /* background-color: #00ffff;  light sky blue: #e1f8fa */
   /* color: #000000; */
-}
-
-.container {
-  margin-left: -50%;
-  margin-right: -50%;
-  min-height: calc(100vw * 9 / 16);
-  font-family: 'AndaleMono', monospace;
-  font-size: 2.5vw;
-  overflow: hidden;
-  white-space: break-spaces;
-  text-align: center;
 }
 
 .trans { color:transparent; }
