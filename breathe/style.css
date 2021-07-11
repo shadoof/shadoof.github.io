@@ -29,7 +29,7 @@ span {
   background-color: #00ffff; /* light sky blue: #e1f8fa */
   color: #000000;
   opacity: 1;
-  transition: opacity 3s ease; /* -in-out */
+  transition: opacity 5s ease; /* -in-out */
   font-family: 'AndaleMono', monospace;
   font-size: 2.5vw;
   white-space: break-spaces;
