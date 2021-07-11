@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #00ffff;
+  background-color: #001122;
   cursor: none;
   overflow: hidden;
   /*border: 1px dashed #ffffff;*/
@@ -25,16 +25,17 @@ span {
   min-width:  140vw;
   margin-left:  -49%;
   margin-right: -51%;
-  min-height: calc(100vw * 9 / 16);
+  height: calc(100vw * (9 / 16));
   background-color: #00ffff; /* light sky blue: #e1f8fa */
   color: #000000;
   opacity: 1;
+  transition: opacity 3s ease; /* -in-out */
   font-family: 'AndaleMono', monospace;
   font-size: 2.5vw;
   white-space: break-spaces;
   text-align: center;
   border: none;
-  padding: none;
+  padding-top: 1vw;
   overflow: hidden;
 }
 
