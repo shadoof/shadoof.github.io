@@ -25,7 +25,7 @@ span {
   min-width:  140vw;
   margin-left:  -49%;
   margin-right: -51%;
-  height: calc(100vw * (9 / 16));
+  height: calc(101vw * (9 / 16));
   background-color: #00ffff; /* light sky blue: #e1f8fa */
   color: #000000;
   opacity: 1;
