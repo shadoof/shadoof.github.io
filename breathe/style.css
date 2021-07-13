@@ -32,10 +32,10 @@ span {
 
 #display {
 	position: absolute;
-	left: 29.6vw;
-  min-width:  140vw;
-  margin-left:  -49%;
-  margin-right: -51%;
+	left: 37%; /*36vw;*/
+  min-width:  110vw;
+  margin-left:  -50%;
+  margin-right: -50%;
   height: calc(1.2em * 19); /*101vw * (9 / 16)*/
   background-color: #00ffff; /* light sky blue: #e1f8fa */
   color: #000000;
