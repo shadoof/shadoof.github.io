@@ -4,7 +4,6 @@
 }
 
 body {
-  cursor: none;
 }
 
 span {
@@ -12,22 +11,29 @@ span {
 }
 
 #frame {
-  position: absolute;
-  min-width:  140vw;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-51%);
-  border: none;
-  padding:  none;
+  position: fixed;
+	min-width: 100vw;
+	min-height: calc(100vw * 9 / 16);
+	left: 0px;
+  top: 0px;
   overflow: hidden;
+	border: 1px dotted #ff0000;
+	padding: none;
+	margin: none;
 }
 
 #display {
-  min-width:  140vw;
+	position: absolute;
+	left: -10px;
+	top: 100px;
+	color: red;
+	border: 1px solid #333;
+	display: inline-block;
+/*  min-width:  140vw;
   margin-left:  -51%;
   margin-right: -49%;
   min-height: calc(100vw * 9 / 16);
-  background-color: #00ffff; /* light sky blue: #e1f8fa */
+  background-color: #00ffff; /* light sky blue: #e1f8fa *!/
   color: #000000;
   opacity: 1;
   font-family: 'AndaleMono', monospace;
@@ -36,7 +42,7 @@ span {
   text-align: center;
   border: none;
   padding: none;
-  overflow: hidden;
+  overflow: hidden;*/
 }
 
 .none {
