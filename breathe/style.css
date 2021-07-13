@@ -15,13 +15,20 @@ span {
 }
 
 #frame {
-  position: relative;
-  margin-left: -51.5%;
-  margin-right: -48.5%;
+  position: fixed;
+	min-width: 100vw;
+	min-height: calc(101vw * 9 / 16);
+	left: 0px;
+  top: 0px;
   overflow: hidden;
+	border: none; /*1px dotted #ff0000;*/
+	padding: none;
+	margin: none;
 }
 
 #display {
+	position: absolute;
+	left: 29.6vw;
   min-width:  140vw;
   margin-left:  -49%;
   margin-right: -51%;
