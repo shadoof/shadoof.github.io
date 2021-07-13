@@ -15,11 +15,15 @@ span {
 }
 
 #frame {
+  font-family: 'AndaleMono', monospace;
+  font-size: 2.5vw;
+	line-height: 1.15em;
   position: fixed;
-	min-width: 100vw;
-	min-height: calc(101vw * 9 / 16);
 	left: 0px;
   top: 0px;
+	margin-top: 2.5vw;
+	min-width: 100vw;
+	min-height: calc(1.2em * 19);
   overflow: hidden;
 	border: none; /*1px dotted #ff0000;*/
 	padding: none;
@@ -32,13 +36,11 @@ span {
   min-width:  140vw;
   margin-left:  -49%;
   margin-right: -51%;
-  height: calc(101vw * (9 / 16));
+  height: calc(1.2em * 19); /*101vw * (9 / 16)*/
   background-color: #00ffff; /* light sky blue: #e1f8fa */
   color: #000000;
   opacity: 1;
   transition: opacity 5s ease; /* -in-out */
-  font-family: 'AndaleMono', monospace;
-  font-size: 2.5vw;
   white-space: break-spaces;
   text-align: center;
   border: none;
