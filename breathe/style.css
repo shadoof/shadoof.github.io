@@ -11,6 +11,10 @@ body {
 }
 
 span {
+  -webkit-transition: text-shadow 1s ease; /* -in-out */
+  -moz-transition: text-shadow 1s ease; /* -in-out */
+  -ms-transition: text-shadow 1s ease; /* -in-out */
+  -o-transition: text-shadow 1s ease; /* -in-out */
   transition: text-shadow 1s ease; /* -in-out */
 }
 
@@ -32,7 +36,7 @@ span {
 
 #display {
 	position: absolute;
-	left: 37%; /*36vw;*/
+	left: 37%;
   min-width:  110vw;
   margin-left:  -50%;
   margin-right: -50%;
@@ -40,12 +44,16 @@ span {
   background-color: #00ffff; /* light sky blue: #e1f8fa */
   color: #000000;
   opacity: 1;
-  transition: opacity 5s ease; /* -in-out */
   white-space: break-spaces;
   text-align: center;
   border: none;
   padding-top: 1vw;
   overflow: hidden;
+  -webkit-transition: opacity 5s ease; /* -in-out */
+  -moz-transition: opacity 5s ease; /* -in-out */
+  -ms-transition: opacity 5s ease; /* -in-out */
+  -o-transition: opacity 5s ease; /* -in-out */
+  transition: opacity 5s ease; /* -in-out */
 }
 
 #underlay {
