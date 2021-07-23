@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>reading</title>
+   <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+  </head>
+  <body>
+<div id="frame">
+  <div id="display" class="bug"><span id="0" class="">r</span><span id="1" class="">e</span><span id="2" class="">a</span><span id="3" class="">d</span><span id="4" class="">i</span><span id="5" class="">n</span><span id="6" class="">g</span></div>
+</div>
+  
+<div id="observablehq-run-2bae1a36" class="none"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@shadoof/reading.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "run") return new Inspector(document.querySelector("#observablehq-run-2bae1a36"));
+});
+</script>
+
+  </body>
+
+</html>
