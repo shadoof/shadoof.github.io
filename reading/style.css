@@ -1,12 +1,11 @@
-<style>
-@font-face {
-  font-family: 'SourceCodeProEL';
-  src: url('SourceCodePro-ExtraLight.woff2');
-}
-
 @font-face {
   font-family: 'AndaleMono';
   src: url('AndaleMono.woff2');
+}
+
+@font-face {
+  font-family: 'SourceCodeProEL';
+  src: url('SourceCodePro-ExtraLight.ttf') format('truetype');
 }
 
 body {
@@ -16,9 +15,13 @@ body {
   /*border: 1px dashed #ffffff;*/
 }
 
+span {
+	z-index: 20;
+}
+
 #frame {
   background-color: White;
-  font-family: SourceCodeProEL, AndaleMono, Courier, monospace;
+  font-family: 'SourceCodeProEL', AndaleMono, Courier, monospace;
   font-size: 14vw;
 	line-height: 1.15em;
   position: fixed; /* USE fixed FOR WEB APP VERSION */
@@ -46,13 +49,13 @@ body {
 
 .bug {
   animation-name: bug;
-  animation-duration: 7s;
+  animation-duration: .25s;
   animation-iteration-count: infinite;
 }
 
 .fadeInOut {
   animation-name: shadowInOut, bug;
-  animation-duration: 7s;
+  animation-duration: .25s;
   animation-timeing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
