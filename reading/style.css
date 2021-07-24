@@ -49,13 +49,13 @@ span {
 
 .bug {
   animation-name: bug;
-  animation-duration: .25s;
+  animation-duration: 12s;
   animation-iteration-count: infinite;
 }
 
 .fadeInOut {
   animation-name: shadowInOut, bug;
-  animation-duration: .25s;
+  animation-duration: 12s;
   animation-timeing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
