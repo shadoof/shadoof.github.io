@@ -40,7 +40,7 @@ span {
   letter-spacing: .5ch;
   text-align: center;
   border: none;
-  padding-top: 1vw;
+  padding-top: 7vw;
   overflow: hidden;
   color: white;
   /* text-shadow: 0 0 .25ch ${shadowColor}; */
@@ -49,13 +49,13 @@ span {
 
 .bug {
   animation-name: bug;
-  animation-duration: 12s;
+  animation-duration: .175s;
   animation-iteration-count: infinite;
 }
 
 .fadeInOut {
   animation-name: shadowInOut, bug;
-  animation-duration: 12s;
+  animation-duration: .175s;
   animation-timeing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
