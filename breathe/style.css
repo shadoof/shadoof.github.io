@@ -43,13 +43,13 @@ span {
   margin-left:  -50%;
   margin-right: -50%;
   height: calc(1.2em * 19); /*101vw * (9 / 16)*/
-  background-color: #00ffff; /* light sky blue: #e1f8fa */
-  color: #000000;
+  background-color: #00eeff; /* light sky blue: #e1f8fa */
+  color: #09344e;
   opacity: 1;
   white-space: break-spaces;
   text-align: center;
   border: none;
-  padding-top: 1vw;
+  padding-top: .5vw;
   overflow: hidden;
   -webkit-transition: opacity 5s ease; /* -in-out */
   -moz-transition: opacity 5s ease; /* -in-out */
