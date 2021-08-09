@@ -29,6 +29,7 @@ body {
 }
 
   #display {
+    color: #09348e;
     position: relative;
     min-height: 1.5em;
     padding-top: .2em;
@@ -46,13 +47,13 @@ body {
 
   .text.visible {
     opacity: 1;
-    text-shadow: 0 0 1ch black;
+    text-shadow: 0 0 1ch #09348e;
     /* starts readable */
   }
 
   .text.invisible {
     opacity: 0;
-    text-shadow: 0 0 .5ch red;
+    text-shadow: 0 0 1ch red;
     /* starts readable */
   }
 
