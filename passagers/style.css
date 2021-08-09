@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'AndaleMono';
+  src: url('AndaleMono.woff2');
+}
+
+@font-face {
+  font-family: 'SourceCodeProEL';
+  src: url('SourceCodePro-ExtraLight.ttf') format('truetype');
+}
+
+body {
+  cursor: none;
+  overflow: hidden;
+  /*border: 1px dashed #ffffff;*/
+}
+
+  #display {
+    position: relative;
+    min-height: 1.5em;
+    padding-top: .2em;
+  }
+
+  .overlaid {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .text {
+    transition: text-shadow .9s ease-in-out, opacity .9s ease-in-out;
+  }
+
+  .text.visible {
+    opacity: 1;
+    text-shadow: 0 0 1ch black;
+    /* starts readable */
+  }
+
+  .text.invisible {
+    opacity: 0;
+    text-shadow: 0 0 .5ch red;
+    /* starts readable */
+  }
+
+.none {
+  display: none;
+}
