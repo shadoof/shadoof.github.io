@@ -42,7 +42,7 @@ body {
   }
 
   .text {
-    transition: text-shadow .9s ease-in-out, opacity .9s ease-in-out;
+    transition: text-shadow 90ms ease-in-out, opacity 90ms ease-in-out;
   }
 
   .text.visible {
