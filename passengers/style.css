@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'AndaleMono';
+  src: url('AndaleMono.woff2');
+}
+
+@font-face {
+  font-family: 'SourceCodeProEL';
+  src: url('SourceCodePro-ExtraLight.ttf') format('truetype');
+}
+
+body {
+  overflow: hidden;
+  margin:  0;
+  /*border: 1px dashed #ffffff;*/
+}
+
+#frame {
+  /* >> SETUP DEFAULTS */
+	background-color: black;
+  position: fixed; /* USE fixed FOR WEB APP VERSION */
+	min-width: 100vw;
+	min-height: 100vh;
+  padding: 4vh 2vw;
+	margin: none;
+  overflow: hidden;
+	border: none;
+  /* >> PROJECT SPECIFIC */
+	font-family: 'AndaleMono', monospace;
+	font-size: 4vw; 
+	white-space: break-spaces;
+}
+
+  #line {
+    cursor: none;
+    position: relative;
+    color: #09348e;
+    background-color: whitesmoke; 
+    height: calc(100vh - 8vh);
+    width: calc(100vw - 4vw);
+    padding-top: calc((100vh - 16vh) / 2);
+  }
+
+  #line span {
+    position: absolute;
+    width: 1ch;
+    /* border: 1px dashed red; */
+  }
+
+  .text {
+    text-shadow: red 0 0 1ch;    
+    transition: text-shadow 20ms ease-in-out, opacity 20ms ease-in-out;
+  }
+
+  .text.visible {
+    opacity: 1;
+    /* text-shadow: red 0 0 1.5ch; */
+    /* #09348e */
+  }
+
+  .text.invisible {
+    opacity: 0;
+    /* text-shadow: #09348e 0 0 1.5ch; */
+  }
+
+.none {
+  display: none;
+}
