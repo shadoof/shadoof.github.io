@@ -21,20 +21,20 @@ body {
 	min-width: 100vw;
 	min-height: 100vh;
   padding: 4vh 2vw;
-	margin: none;
+	margin: auto;
   overflow: hidden;
 	border: none;
   /* >> PROJECT SPECIFIC */
 	font-family: 'AndaleMono', monospace;
-	font-size: 4vw; 
+	font-size: calc((96vw / 42) * 1.66); /* 4vw; */ 
 	white-space: break-spaces;
 }
 
   #line {
     cursor: none;
     position: relative;
-    color: #09348e;
-    background-color: whitesmoke; 
+    color: whitesmoke; /* #09348e; */
+    background-color: rgb(45,45,45); /* whitesmoke; */
     height: calc(100vh - 8vh);
     width: calc(100vw - 4vw);
     padding-top: calc((100vh - 16vh) / 2);
@@ -47,7 +47,8 @@ body {
   }
 
   .text {
-    text-shadow: red 0 0 1ch;    
+    color: rgba(255,255,255,.85);
+    text-shadow: rgba(255,0,0,1) 0 0 .25ch; /* red 0 0 1ch */
     transition: text-shadow 20ms ease-in-out, opacity 20ms ease-in-out;
   }
 
