@@ -25,7 +25,7 @@ body {
   overflow: hidden;
 	border: none;
   /* >> PROJECT SPECIFIC */
-	font-family: 'AndaleMono', monospace;
+	font-family: 'AndaleMono-Bold', 'AndaleMono', monospace;
 	font-size: calc((96vw / 42) * 1.66); /* 4vw; */ 
 	white-space: break-spaces;
 }
