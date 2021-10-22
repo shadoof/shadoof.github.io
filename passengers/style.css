@@ -16,6 +16,7 @@ body {
 
 #frame {
   /* >> SETUP DEFAULTS */
+  color: white;
 	background-color: black;
   position: fixed; /* USE fixed FOR WEB APP VERSION */
 	min-width: 100vw;
@@ -26,7 +27,7 @@ body {
 	border: none;
   /* >> PROJECT SPECIFIC */
 	font-family: 'AndaleMono', monospace;
-  font-weight: bold;
+  /* font-weight: bold; */
 	font-size: calc((96vw / 42) * 1.66); /* 4vw; */ 
 	white-space: break-spaces;
 }
@@ -34,8 +35,8 @@ body {
   #line {
     cursor: none;
     position: relative;
-    color: whitesmoke; /* #09348e; */
-    background-color: rgb(45,45,45); /* whitesmoke; */
+    z-index: -1;
+    background-color: rgb(32,32,32); /* whitesmoke; */
     height: calc(100vh - 8vh);
     width: calc(100vw - 4vw);
     padding-top: calc((100vh - 16vh) / 2);
@@ -44,26 +45,51 @@ body {
   #line span {
     position: absolute;
     width: 1ch;
+    border: 1px dashed black; 
     /* border: 1px dashed red; */
   }
 
   .text {
     color: rgba(255,255,255,.85);
-    text-shadow: rgba(255,0,0,1) 0 0 .25ch; /* red 0 0 1ch */
+    text-shadow: rgba(160,64,255,1) 0 0 .75ch; /* red 0 0 1ch */
     transition: text-shadow 20ms ease-in-out, opacity 20ms ease-in-out;
   }
 
   .text.visible {
     opacity: 1;
+    font-stretch: normal;
     /* text-shadow: red 0 0 1.5ch; */
     /* #09348e */
   }
 
   .text.invisible {
     opacity: 0;
+    font-stretch: expanded;
     /* text-shadow: #09348e 0 0 1.5ch; */
   }
 
+  .text.visible:before {
+    position: absolute;
+    z-index: -1;
+    top: 5%; left: 5%;
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(#eeeeff00, #eeeeff00, #eeeeff30, #eeeeff00);
+    content: '';
+    border: 1px solid #333;
+  }
+  
+  .text.invisible:before {
+    position: absolute;
+    z-index: -1;
+    top: 5%; left: 5%;
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(#ffeeee00, #ffeeee30, #ffeeee00, #ffeeee00);
+    content: '';
+    border: 1px solid #333;
+  }
+  
 .none {
   display: none;
 }
