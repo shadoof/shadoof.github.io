@@ -4,8 +4,10 @@
 }
 
 @font-face {
-  font-family: 'SourceCodeProEL';
-  src: url('SourceCodePro-ExtraLight.ttf') format('truetype');
+  font-family: 'NotoSansMono';
+  src: local('Noto Sans Mono'),
+  url('NotoSansMono-VariableFont_wdth,wght.woff2') format('woff2 supports variations'),
+  url('NotoSansMono-VariableFont_wdth,wght.woff2') format('woff2-variations');
 }
 
 body {
@@ -26,7 +28,7 @@ body {
   overflow: hidden;
 	border: none;
   /* >> PROJECT SPECIFIC */
-	font-family: 'AndaleMono', monospace;
+	font-family: 'NotoSansMono', monospace;
   /* font-weight: bold; */
 	font-size: calc((96vw / 42) * 1.66); /* 4vw; */ 
 	white-space: break-spaces;
@@ -49,6 +51,11 @@ body {
     /* border: 1px dashed red; */
   }
 
+  #line span.redact {
+  	display: inline-block;
+    transform: scaleY(.8);
+  }
+  
   .text {
     color: rgba(255,255,255,.85);
     text-shadow: rgba(160,64,255,1) 0 0 .75ch; /* red 0 0 1ch */
