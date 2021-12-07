@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>regular</title>
+		<style>
+			.trans { display:none; }
+      .textcontainer {
+        font-size: 24pt;
+      }
+		</style>
+	</head>
+	<body>
+	<div class="textcontainer"><div id="observablehq-regular-fbdd4432"></div></div></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/1fd1e33dd5623798.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "regular") return new Inspector(document.querySelector("#observablehq-regular-fbdd4432"));
+});
+</script>
+
+</html>

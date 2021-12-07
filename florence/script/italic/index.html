@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>italic</title>
+		<style>
+			.trans { display:none; }
+      .textcontainer {
+        font-size: 24pt;
+      }
+		</style>
+	</head>
+	<body>
+	<div class="textcontainer"><div id="observablehq-italic-553c2334"></div></div>
+
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/1fd1e33dd5623798.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "italic") return new Inspector(document.querySelector("#observablehq-italic-553c2334"));
+});
+</script>
+
+</html>
