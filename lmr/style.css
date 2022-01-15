@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'SimSun-18030';
+    src: local('SimSun-18030'),
+    url('Sun-ExtA.woff2') format('woff2'),
+    url('Sun-ExtA.woff') format('woff'),
+    url('Sun-ExtA.ttf') format('ttf');
+}
+
+/* @group general */
+
+body {
+	background-color: floralwhite;
+	color: #000;
+	width: 100%;
+	margin: 10vw;
+	font: 24px SimSun-18030, "Bodoni SvtyTwo OS ITC TT", Bodoni, Didot;
+}
+
+div#next {
+	cursor: pointer;
+	position: fixed;
+	bottom: 2vw;
+	right: 2vw;
+}
+
+div#container {
+	cursor: pointer;
+}
+
+p {
+	cursor: pointer;
+  margin-right: 25vw;
+}
+
+span {
+	transition: color 2s ease-in-out, background-color 2s ease-in-out;
+}
+
+#readable {
+	color: rgba(0,0,0,255);
+}
+
+#invisible {
+	color: rgba(0,0,0,0);
+}
+
+.text {
+	color: rgba(0,0,0,0);
+	transition: color 2s ease-in-out, background-color 2s ease-in-out;
+}
+
+.text.readable {
+	color: rgba(0,0,0,0);
+	  /* starts invisible */
+}
+
+.text.invisible {
+	color: rgba(0,0,0,255);
+	  /* starts readable */
+}
+
+.text.alwaysOn {
+	color: rgba(0,0,0,255);
+	  /* starts readable */
+}
+
+.text.visible {
+  color: rgba(0,0,0,255);
+    /* starts readable */
+}
+
+.trans {
+	color: transparent;
+}
+
+.none {
+  display: none;
+}
+
+.bib {
+	margin-left: 2vw;
+	text-indent: 1vw;
+  cursor: pointer;
+}
+
+.heading {
+  cursor: default;
+}
+
+. italic {
+	font-style: italic;
+}
+
+.quote {
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
+
+.small {
+	letter-spacing: 0.1em;
+	font: 16px SimSun-18030, "Bodoni SvtyTwo OS ITC TT", Bodoni, Didot;
+}
+
+small {
+	letter-spacing: 0.1em;
+	font: 18px SimSun-18030, "Bodoni SvtyTwo OS ITC TT", Bodoni, Didot;
+}
+
+.w {
+	color: white;
+}
+
+.b {
+	color: black;
+}
+
+.cursordefault {
+	cursor: default;
+}
+
+.cursorpointer {
+	cursor: pointer;
+}
+
+.nocursor {
+	cursor: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.wide {
+	width: 800px;
+}
+
+h1 {
+	color: rgba(0,0,0,0);
+	font: 36px "SimSun-18030";
+	letter-spacing: 0.3em;
+	text-align: center;
+}
+
+h2 {
+	/*border-bottom: 1px dotted #313131;*/
+	color: rgba(0,0,0,0);
+	font: 32px "SimSun-18030";
+	letter-spacing: 0.3em;
+	cursor: pointer;
+}
+
+h3 {
+	color: rgba(0,0,0,0);
+	letter-spacing: 0.1em;
+	font: 18px SimSun-18030, "Bodoni SvtyTwo OS ITC TT", Bodoni, Didot;
+}
+
+/*h3 a {
+	text-decoration: none;
+	color: #000000;
+  /*4aa5cb*!/
+}*/
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	background-color: #eeeeee;	
+}
+
+/*a:hover {
+	color: #7f7f7f;
+}*/
+
+/* @end */
