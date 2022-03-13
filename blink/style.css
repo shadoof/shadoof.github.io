@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'DidotBold';
+  src: url('Didot-Bold.woff2') format('woff2'),
+       url('Didot-Bold.ttf')  format('truetype');
+}
+
 body {
   position: relative;
   background-color: ivory;
@@ -13,9 +19,9 @@ body {
   top:  6vw;
   display: grid;
   color: red;
-  font-family: Didot;
+  font-family: DidotBold;
   font-size: 4.5vw;
-  font-weight: bold;
+  /* font-weight: bold; */
   line-height: 1em;
   grid-template-columns: 1em 1em 1em 1em 1em 1em 1em 1em 1em;
 }
