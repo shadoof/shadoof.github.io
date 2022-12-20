@@ -1,0 +1,51 @@
+/* @font-face {
+  font-family: 'DidotBold';
+  src: url('Didot-Bold.woff2') format('woff2'),
+       url('Didot-Bold.ttf')  format('truetype');
+} */
+
+body {
+  position: relative;
+  background-color: ivory;
+	color: gray;
+  cursor: none;
+  overflow: hidden;
+  /*border: 1px dashed #ffffff;*/
+}
+
+/*
+.grid {
+  position: absolute;
+  left:  25vw;
+  top:  6vw;
+  display: grid;
+  color: red;
+  font-family: DidotBold;
+  font-size: 4.5vw;
+  font-weight: bold;
+  line-height: 1em;
+  grid-template-columns: 1em 1em 1em 1em 1em 1em 1em 1em 1em;
+}
+
+.gridItem {
+  overflow: hidden:
+  height: 1em;
+  transition: height 1s linear;
+}
+
+.en {
+  color: black;
+}
+
+.po {
+  color: red;
+}
+*/
+
+.none {
+  display: none;
+}
+
+.trans {
+  color:transparent;
+}
