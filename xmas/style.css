@@ -39,8 +39,8 @@ body {
 
   #display {
     position: relative;
-    top: 2.2vw;
-    left: 40vw;
+    top: 8vw;
+    left: 57vw;
     min-height: 47.8vw;
     background-color: black;
   }
@@ -71,7 +71,7 @@ body {
     height: calc(100% - 2vw);
     width: auto;
     top: 1vw;
-    left: 1vw;
+    left: 5vw;
   }
 
   .text {
