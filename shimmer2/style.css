@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'AndaleMono';
+  src: url('AndaleMono.ttf');
+}
+
+@font-face {
+  font-family: 'MinionPro';
+  src: local('MinionPro-Regular'),
+  url('MinionPro-Regular.woff2') format('woff2'),
+  url('MinionPro-Regular.woff') format('woff'),
+  url('MinionPro-Regular.otf') format('opentype');
+}
+
+body {
+  background-color: #000;
+  cursor: none;
+  overflow: hidden;
+  /*border: 1px dashed #ffffff;*/
+}
+
+.frame {
+  font-family: MinionPro, serif;
+  font-variant-ligatures: no-common-ligatures;
+  font-size: 3vw; /* 25px */
+  text-align: center;
+  background-color: #121212;
+  color: floralwhite;
+  padding: 2em 0px;
+}
+
+.pink {
+  color: lemonchiffon; /* lightgoldenrodyellow, lemonchiffon, lightyellow, gold */
+  text-shadow: 0 0 0.5ch white,
+    0 0 1.5ch white;
+}
+.blue {
+  /* background-color: lightblue; */
+}
+
+/*.mono {
+  color: rgba(255,255,255,255);
+  font-family: 'AndaleMono', monospace;
+  font-size: 44px;
+  font-size: 3.4vw;
+ }
+*/
+.trans { color:transparent; }
+
+.none {
+  display: none;
+}
