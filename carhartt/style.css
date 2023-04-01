@@ -1,6 +1,9 @@
 @font-face {
   font-family: 'AndaleMono';
-  src: url('AndaleMono.ttf');
+  src: local('AndaleMono'),
+  url('../fonts/AndaleMono.woff2') format('woff2'),
+  url('../fonts/AndaleMono.woff') format('woff'),
+  url('../fonts/AndaleMono.ttf')  format('truetype');
 }
 
 body {

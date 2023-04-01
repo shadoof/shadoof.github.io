@@ -1,14 +1,9 @@
-/*@font-face {
-  font-family: 'AndaleMono';
-  src: url('AndaleMono.woff2');
-}
-*/
 @font-face {
   font-family: 'NotoSerif';
   src: local('NotoSerif'),
-  url('NotoSerif-Regular.woff2') format('woff2'),
-  url('NotoSerif-Regular.woff') format('woff'),
-  url('NotoSerif-Regular.ttf') format('ttf')
+  url('../fonts/NotoSerif-Regular.woff2') format('woff2'),
+  url('../fonts/NotoSerif-Regular.woff') format('woff'),
+  url('../fonts/NotoSerif-Regular.ttf') format('ttf')
 }
 
 body {

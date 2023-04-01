@@ -1,4 +1,12 @@
 @font-face {
+  font-family: 'Perpetua';
+  src: local('Perpetua'),
+  url('../fonts/Perpetua.woff2') format('woff2'),
+  url('../fonts/Perpetua.woff') format('woff'),
+  url('../fonts/Perpetua.ttf')  format('truetype');
+}
+
+@font-face {
 font-family: 'Perpetua';
 src: url('Perpetua.ttf');
 }

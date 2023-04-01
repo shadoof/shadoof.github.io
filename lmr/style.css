@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'SimSun-18030';
     src: local('SimSun-18030'),
-    url('Sun-ExtA.woff2') format('woff2'),
-    url('Sun-ExtA.woff') format('woff'),
-    url('Sun-ExtA.ttf') format('ttf');
+    url('../fonts/Sun-ExtA.woff2') format('woff2'),
+    url('../fonts/Sun-ExtA.woff') format('woff'),
+    url('../fonts/Sun-ExtA.ttf') format('ttf');
 }
 
 /* @group general */
