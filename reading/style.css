@@ -1,15 +1,21 @@
 @font-face {
   font-family: 'AndaleMono';
-  src: url('AndaleMono.woff2');
+  src: local('Andale Mono'),
+  url('../fonts/AndaleMono.woff2') format('woff2'),
+  url('../fonts/AndaleMono.woff') format('woff'),
+  url('../fonts/AndaleMono.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'SourceCodeProEL';
-  src: url('SourceCodePro-ExtraLight.ttf') format('truetype');
+  src: local('SourceCodePro-ExtraLight'),
+  url('../fonts/SourceCodePro-ExtraLight.woff2') format('woff2'),
+  url('../fonts/SourceCodePro-ExtraLight.woff') format('woff'),
+  url('../fonts/SourceCodePro-ExtraLight.ttf') format('truetype');
 }
 
 body {
-  background-color: #000044;
+  background-color: white; /*#000044;*/
   cursor: none;
   overflow: hidden;
   /*border: 1px dashed #ffffff;*/
@@ -23,10 +29,10 @@ span {
   background-color: White;
   font-family: 'SourceCodeProEL', AndaleMono, Courier, monospace;
   font-size: 14vw;
-	line-height: 1.15em;
+	line-height: 16vw;
   position: fixed; /* USE fixed FOR WEB APP VERSION */
 	min-width: 100vw;
-	min-height: calc(1.2em * 2);
+	min-height: 32vw;
 	border: none;
 	padding: none;
 	margin: none;
@@ -35,7 +41,7 @@ span {
 
 #display {
 	position: absolute;
-  height: calc(1.2em * 2);
+  height: 32vw;
 	min-width: 100vw;
   letter-spacing: .5ch;
   text-align: center;

@@ -1,14 +1,17 @@
 @font-face {
-  font-family: 'AndaleMono';
-  src: url('AndaleMono.ttf');
+  font-family: 'MinionPro';
+  src: local('MinionPro-Regular'),
+  url('../fonts/MinionPro-Regular.woff2') format('woff2'),
+  url('../fonts/MinionPro-Regular.woff') format('woff'),
+  url('../fonts/MinionPro-Regular.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'MinionPro';
-  src: local('MinionPro-Regular'),
-  url('MinionPro-Regular.woff2') format('woff2'),
-  url('MinionPro-Regular.woff') format('woff'),
-  url('MinionPro-Regular.otf') format('opentype');
+  font-family: 'AndaleMono';
+  src: local('Andale Mono'),
+  url('../fonts/AndaleMono.woff2') format('woff2'),
+  url('../fonts/AndaleMono.woff') format('woff'),
+  url('../fonts/AndaleMono.ttf') format('truetype');
 }
 
 body {
