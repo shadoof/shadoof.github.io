@@ -25,9 +25,9 @@
 @font-face {
   font-family: 'CenturySchoolbook';
   src: local('Century Schoolbook'),
-  url('CenturySchoolbook.woff2') format('woff2'),
-  url('CenturySchoolbook.woff') format('woff'),
-  url('CenturySchoolbook.ttf') format('ttf')
+  url('../fonts/CenturySchoolbook.woff2') format('woff2'),
+  url('../fonts/CenturySchoolbook.woff') format('woff'),
+  url('../fonts/CenturySchoolbook.ttf') format('ttf')
 }
 
 /*@font-face {
