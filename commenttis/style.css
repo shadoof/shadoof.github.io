@@ -1,0 +1,70 @@
+/*@font-face {
+  font-family: 'NotoSerif';
+  src: local('NotoSerif'),
+  url('NotoSerif-Regular.woff2') format('woff2'),
+  url('NotoSerif-Regular.woff') format('woff'),
+  url('NotoSerif-Regular.ttf') format('ttf')
+}*/
+
+/*@font-face {
+  font-family: 'ACaslonPro';
+  src: local('ACaslonPro-Regular'),
+  url('ACaslonPro-Regular.woff2') format('woff2'),
+  url('ACaslonPro-Regular.woff') format('woff'),
+  url('ACaslonPro-Regular.otf') format('otf')
+}*/
+
+/*@font-face {
+  font-family: 'Century';
+  src: local('Century'),
+  url('Century.woff2') format('woff2'),
+  url('Century.woff') format('woff'),
+  url('Century.ttf') format('ttf')
+}*/
+
+@font-face {
+  font-family: 'CenturySchoolbook';
+  src: local('Century Schoolbook'),
+  url('CenturySchoolbook.woff2') format('woff2'),
+  url('CenturySchoolbook.woff') format('woff'),
+  url('CenturySchoolbook.ttf') format('ttf')
+}
+
+/*@font-face {
+  font-family: 'Optima-Regular';
+  src: local('Optima-Regular'),
+  url('Optima-Regular.woff2') format('woff2'),
+  url('Optima-Regular.woff') format('woff'),
+  url('Optima-Regular.ttf') format('ttf')
+}*/
+
+body {
+  font: 1.8vw CenturySchoolbook, serif;
+  color: black;
+  margin: 5vw 15vw;
+}
+
+#display {
+  color: black; /* orange is good for debugging */
+  font-variant-ligatures: no-common-ligatures;
+}
+
+.fade { 
+  cursor: pointer;
+  transition: color .7s ease-in-out; /* vendorless fallback */
+  -o-transition: color .7s ease-in-out; /* opera */
+  -ms-transition: color .7s ease-in-out; /* IE 10 */
+  -moz-transition: color .7s ease-in-out; /* Firefox */
+  -webkit-transition: color .7s ease-in-out; /*safari and chrome */
+}
+
+.fade:hover {
+  color: white;
+}
+
+em {
+  /* font-family: monospace; */
+  font-style: normal;
+  /* font-weight: bold; */
+  color: black; /* darkred is good for debugging with orange */
+}
