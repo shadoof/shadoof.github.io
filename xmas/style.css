@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'NotoSerif';
-  src: local('NotoSerif'),
+  src: local('Noto Serif'),
   url('../fonts/NotoSerif-Regular.woff2') format('woff2'),
   url('../fonts/NotoSerif-Regular.woff') format('woff'),
   url('../fonts/NotoSerif-Regular.ttf') format('ttf')
@@ -13,79 +13,79 @@ body {
   /*border: 1px dashed #ffffff;*/
 }
 
-  :root {
-    --ffam: NotoSerif, serif, monospace;
-    --fsize: 2.3vw;
-  }
+:root {
+  --ffam: NotoSerif, serif, monospace;
+  --fsize: 2.3vw;
+}
 
-  #frame {
-    position: relative;
-    padding: 1vw;
-    min-width: 100vw;
-    min-height: 50vw;
-    background-color: black;
-    font-family: var(--ffam);
-    font-size: var(--fsize);
-    color: floralwhite;
-    cursor: none;
-    overflow: hidden;
-    margin-top: calc((100vh - 50vw) / 3);
-  }
+#frame {
+  position: relative;
+  padding: 1vw;
+  min-width: 100vw;
+  min-height: 50vw;
+  background-color: black;
+  font-family: var(--ffam);
+  font-size: var(--fsize);
+  color: floralwhite;
+  cursor: none;
+  overflow: hidden;
+  margin-top: calc((100vh - 50vw) / 3);
+}
 
-  #display {
-    position: relative;
-    top: 8vw;
-    left: 57vw;
-    min-height: 47.8vw;
-    background-color: black;
-  }
+#display {
+  position: relative;
+  top: 8vw;
+  left: 57vw;
+  min-height: 47.8vw;
+  background-color: black;
+}
 
-  pre {
-    margin: 0;
-    font-family: var(--ffam);
-    font-size: var(--fsize);
-  }
+pre {
+  margin: 0;
+  font-family: var(--ffam);
+  font-size: var(--fsize);
+}
 
-  img {
-    position: absolute;
-    top: -2.2vw;
-    left: -2.5vw;
-    opacity: 0;
-    height: 100%;
-    width: 55%;
-    filter: invert(1);
-    transition: opacity 1.5s ease-in-out; /* vendorless fallback */
-    -o-transition: opacity 1.5s ease-in-out; /* opera */
-    -ms-transition: opacity 1.5s ease-in-out; /* IE 10 */
-    -moz-transition: opacity 1.5s ease-in-out; /* Firefox */
-    -webkit-transition: opacity 1.5s ease-in-out; /*safari and chrome */
-  }
+img {
+  position: absolute;
+  top: -2.2vw;
+  left: -2.5vw;
+  opacity: 0;
+  height: 100%;
+  width: 55%;
+  filter: invert(1);
+  transition: opacity 1.5s ease-in-out; /* vendorless fallback */
+  -o-transition: opacity 1.5s ease-in-out; /* opera */
+  -ms-transition: opacity 1.5s ease-in-out; /* IE 10 */
+  -moz-transition: opacity 1.5s ease-in-out; /* Firefox */
+  -webkit-transition: opacity 1.5s ease-in-out; /*safari and chrome */
+}
 
-  img.visible {
-    opacity: .4;
-  }
+img.visible {
+  opacity: .4;
+}
 
-  img.colophon {
-    opacity: 1;
-    height: calc(100% - 2vw);
-    width: auto;
-    top: 1vw;
-    left: 5vw;
-  }
+img.colophon {
+  opacity: 1;
+  height: calc(100% - 2vw);
+  width: auto;
+  top: 1vw;
+  left: 5vw;
+}
 
-  .text {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out; /* vendorless fallback */
-    -o-transition: opacity 1.5s ease-in-out; /* opera */
-    -ms-transition: opacity 1.5s ease-in-out; /* IE 10 */
-    -moz-transition: opacity 1.5s ease-in-out; /* Firefox */
-    -webkit-transition: opacity 1.5s ease-in-out; /*safari and chrome */
-  }
+.text {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* vendorless fallback */
+  -o-transition: opacity 1.5s ease-in-out; /* opera */
+  -ms-transition: opacity 1.5s ease-in-out; /* IE 10 */
+  -moz-transition: opacity 1.5s ease-in-out; /* Firefox */
+  -webkit-transition: opacity 1.5s ease-in-out; /*safari and chrome */
+}
 
-  .text.visible {
-    opacity: 1;
-  }
+.text.visible {
+  opacity: 1;
+}
 
 .none {
   display: none;
