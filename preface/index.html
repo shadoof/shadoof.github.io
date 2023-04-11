@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>preface</title>
+   <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+  </head>
+  <body>
+<div id="frame">
+  <div id="display">
+    
+  </div>
+</div>
+  
+<div id="observablehq-play-5e26330b" class="none"></div>
+<div id="observablehq-csplay-5e26330b" class="none"></div>
+<div id="observablehq-preface-5e26330b" class="none"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@shadoof/preface@712.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "play") return new Inspector(document.querySelector("#observablehq-play-5e26330b"));
+  if (name === "csplay") return new Inspector(document.querySelector("#observablehq-csplay-5e26330b"));
+  if (name === "preface") return new Inspector(document.querySelector("#observablehq-preface-5e26330b"));
+  return ["player","playCode","cwords","wordsTo","allWords","NB","playOld"].includes(name);
+});
+</script>
+
+  </body>
+
+</html>

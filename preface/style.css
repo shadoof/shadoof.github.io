@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Times New Roman';
+  src: local('Times New Roman'),
+  url('../fonts/Times New Roman.woff2') format('woff2'),
+  url('../fonts/Times New Roman.ttf') format('truetype');
+}
+
+body {
+  background-color: floralwhite; /*#000044;*/
+  font-family: 'Times New Roman', serif;
+  font-size: 8vw;
+  cursor: none;
+  overflow: hidden;
+  /*border: 1px dashed #ffffff;*/
+}
+
+#frame {
+	line-height: 16vw;
+  position: fixed; /* USE fixed FOR WEB APP VERSION */
+	min-width: 100vw;
+	min-height: 32vw;
+	border: none;
+	padding: none;
+	margin: none;
+  overflow: hidden;
+}
+
+#display {
+	position: absolute;
+  height: 32vw;
+	min-width: 100vw;
+  letter-spacing: .05ch;
+  text-align: center;
+  border: none;
+  padding-top: 14vw;
+  overflow: hidden;
+  /* text-shadow: 0 0 .25ch ${shadowColor}; */
+  /* transition: text-shadow ${period}s ease-in-out; */
+}
+
+.trans { color:transparent; }
+
+.none {
+  display: none;
+}
