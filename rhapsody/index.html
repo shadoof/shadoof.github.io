@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  
+  <title>rhapsody</title>
+  
+  <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+</head>
+<body>
+  <div id="frame">
+    <div id="display">
+      <div id="observablehq-2564f872"></div>
+    </div>
+  </div>
+</body>
+<script type="module">
+import {
+  Runtime,
+  Inspector
+}
+from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@shadoof/rhapsody@309.js?v=3";
+new Runtime().module(define, Inspector.into("#observablehq-2564f872"));
+</script>
+</html>
+
