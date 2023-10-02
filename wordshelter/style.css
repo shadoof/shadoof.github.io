@@ -7,6 +7,7 @@
 }
 
 body {
+  font-family: 'AndaleMono';
   background-color: floralwhite; /*#000044;*/
   margin-top: 2px;
   margin-left: 2px;
@@ -16,7 +17,6 @@ body {
 }
 
 .container {
-  font-family: 'AndaleMono';
   font-size: 6vw;
   line-height: 7.7vw;
   letter-spacing: .3vw;
