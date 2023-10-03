@@ -16,6 +16,10 @@ body {
   /*border: 1px dashed #ffffff;*/
 }
 
+code {
+  font-family: 'AndaleMono';
+}
+
 .container {
   font-size: 6vw;
   line-height: 7.7vw;
