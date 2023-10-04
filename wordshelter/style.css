@@ -17,13 +17,21 @@ body {
 }
 
 code {
-  font-family: 'AndaleMono';
+  font-family: 'AndaleMono', monospace;
+}
+
+span.bd {
+  white-space: pre-wrap;
+}
+
+.code {
+  font-family: 'AndaleMono', monospace;
 }
 
 .container {
   font-size: 6vw;
   line-height: 7.7vw;
-  letter-spacing: .3vw;
+  letter-spacing: .22vw;
 	width: 89vw;
 	height: 47.5vw;
 	border: none; /*1px dotted lightgray;*/
