@@ -26,7 +26,7 @@ code {
   letter-spacing: .3vw;
 	width: 89vw;
 	height: 47.5vw;
-	border: 1px dotted lightgray;
+	border: none; /*1px dotted lightgray;*/
 	padding: 5vw;
 	margin: none;
   overflow: hidden;
