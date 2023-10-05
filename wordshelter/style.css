@@ -31,12 +31,12 @@ span.bd {
 .container {
   font-size: 6vw;
   line-height: 7.7vw;
-  letter-spacing: .22vw;
+  letter-spacing: .21vw;
 	width: 89vw;
 	height: 47.5vw;
 	border: none; /*1px dotted lightgray;*/
 	padding: 5vw;
-	margin: none;
+	margin: auto;
   overflow: hidden;
 }
 
