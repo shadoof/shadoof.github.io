@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'AndaleMono';
+  src: local('Andale Mono'),
+  url('../fonts/AndaleMono.woff2') format('woff2'),
+  url('../fonts/AndaleMono.woff') format('woff'),
+  url('../fonts/AndaleMono.ttf') format('truetype');
+}
+
+body {
+  font-family: 'AndaleMono';
+  background-color: floralwhite; /*#000044;*/
+  margin-top: 2px;
+  margin-left: 2px;
+  /*cursor: none;*/
+  overflow: hidden;
+  /*border: 1px dashed #ffffff;*/
+}
+
+code {
+  font-family: 'AndaleMono', monospace;
+}
+
+span.bd {
+  white-space: pre-wrap;
+}
+
+.code {
+  font-family: 'AndaleMono', monospace;
+}
+
+.container {
+  font-size: 6vw;
+  line-height: 7.7vw;
+  /*letter-spacing: .1vw;*/
+	width: 89vw;
+	height: 47.5vw;
+	border: none; /*1px dotted lightgray;*/
+	padding: 5vw;
+	margin: auto;
+  overflow: hidden;
+}
+
+.trans { color:transparent; }
+
+.none {
+  display: none;
+}
