@@ -12,7 +12,7 @@ body {
   margin-top: 2px;
   margin-left: 2px;
   /*cursor: none;*/
-  overflow: hidden;
+  /*overflow: hidden;*/
   /*border: 1px dashed #ffffff;*/
 }
 
@@ -20,12 +20,28 @@ code {
   font-family: 'AndaleMono', monospace;
 }
 
+div {
+  clear: left;
+}
+
+div#morphBoard {
+  display: none;
+}
+
 span.bd {
   white-space: pre-wrap;
+  float: left; 
+  width: 1.05ch;
+  text-align: center; 
+  margin-bottom: .25em; 
+  margin-right: 0.07ch;
 }
 
 .code {
   font-family: 'AndaleMono', monospace;
+  font-family: 'AndaleMono', monospace;
+  line-height: 1.1em;
+  white-space: pre-wrap;
 }
 
 .container {
