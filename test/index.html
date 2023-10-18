@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Word Shelter</title>
+    <title>test</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <link rel='stylesheet' href='style.css' type='text/css' media='all' />
   </head>
@@ -14,19 +14,22 @@
   
   <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/1c72a97588024790@697.js?v=4&api_key=e5e6c3190af5ba2a6bb0c495fc56c645ec16b3b6";
+  import define from "https://api.observablehq.com/@shadoof/distill-tester.js?v=4";
   
   const parent = document.getElementById("nbparent");
-  new Runtime().module(define, name => {
-    const container = document.createElement("div");
-    console.log(typeof name, name);
-    if (name) {
-      container.id = name;
-      if (name.startsWith("_")) container.style.display = "none";
-    }
-    parent.append(container);
-    return new Inspector(container);
-  });
+  const runtime = new Runtime();
+  let mymodule = runtime.module(define);
+//  let mymodule = runtime.module(define, name => {
+//    const container = document.createElement("div");
+//    console.log(typeof name, name);
+//    if (name) {
+//      container.id = name;
+//      if (name.startsWith("_")) container.style.display = "none";
+//    }
+//    parent.append(container);
+//    return new Inspector(container);
+//  });
+  console.log(typeof mymodule, mymodule);
   </script>
 
   </body>
