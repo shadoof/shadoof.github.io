@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<meta http-equiv="refresh" content="60">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Word Shend</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+  </head>
+  <body>
+    <div class="container" id="nbparent"></div>
+  
+    <script type="module">
+      async function sendWS(msg, apikey) {
+        await fetch("https://rw.vestaboard.com/", {
+          body: JSON.stringify(msgNumlines(msg)),
+          headers: {
+            "Content-Type": "application/json",
+            "X-Vestaboard-Read-Write-Key": apikey
+          },
+          method: "POST"
+        }).then((res) => true);
+      }
+    
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/@shadoof/sifther-ws.js?v=3&api_key=f2fd1dd212408c2006a360fdd716066cc57a3d98";
+    
+    var msgInspector;
+    var wc;
+    
+    const parent = document.getElementById("nbparent");
+    new Runtime().module(define, name => {
+      const container = document.createElement("div");
+      console.log(typeof name, name);
+      if (name) {
+        container.id = name;
+        if (name.startsWith("_")) container.style.display = "none";
+      }
+      parent.append(container);
+      let insp = new Inspector(container);
+      if (name === "assembled10") { wc = insp;
+        console.log("wc", wc);
+      }
+      return insp;
+    });
+    
+    console.log(wc, msgInspector);
+    </script>
+
+  </body>
+</html>
