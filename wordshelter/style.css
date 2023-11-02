@@ -6,11 +6,14 @@
   url('../fonts/AndaleMono.ttf') format('truetype');
 }
 
+html {
+  font-family: 'AndaleMono', monospace;
+  font-size: 5.1vw;
+  }
+
 body {
-  font-family: 'AndaleMono';
   background-color: floralwhite; /*#000044;*/
-  margin-top: 2px;
-  margin-left: 2px;
+  margin: .5vw auto;
   /*cursor: none;*/
   overflow: hidden;
   /*border: 1px dashed #ffffff;*/
@@ -20,19 +23,26 @@ code {
   font-family: 'AndaleMono', monospace;
 }
 
+div {
+  clear: left
+}
+
 span.bd {
   white-space: pre-wrap;
-  border: 2px inset;
+  border: .25vw inset;
+  float: left;
+  width: 1.05ch; 
+  text-align: center; 
+  margin-bottom: .25em;
+  margin-right: 0.07ch;
 }
 
 .code {
   font-family: 'AndaleMono', monospace;
+  line-height: 1.3em;
 }
 
 .container {
-  font-size: 5.1vw;
-  /* lineheight is done in the notebook css */
-  /*letter-spacing: .1vw;*/
 	width: 89vw;
 	height: 47.5vw;
 	border: none; /*1px dotted lightgray;*/

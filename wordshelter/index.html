@@ -18,14 +18,16 @@
   
   const parent = document.getElementById("nbparent");
   new Runtime().module(define, name => {
-    const container = document.createElement("div");
-    console.log(typeof name, name);
-    if (name) {
-      container.id = name;
-      if (name.startsWith("_")) container.style.display = "none";
+      if (!name.includes("css")) {
+      const container = document.createElement("div");
+      console.log(typeof name, name);
+      if (name) {
+        container.id = name;
+        if (name.startsWith("_")) container.style.display = "none";
+      }
+      parent.append(container);
+      return new Inspector(container);
     }
-    parent.append(container);
-    return new Inspector(container);
   });
   </script>
 
