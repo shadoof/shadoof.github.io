@@ -24,7 +24,7 @@ code {
 }
 
 div {
-  clear: left
+  clear: left;
 }
 
 span.bd {
@@ -37,9 +37,15 @@ span.bd {
   margin-right: 0.07ch;
 }
 
+.board {
+  width: 100%;
+}
+
 .code {
   font-family: 'AndaleMono', monospace;
   line-height: 1.3em;
+  text-align: center;
+  padding-left: 2vw;
 }
 
 .container {
