@@ -22,7 +22,7 @@ code {
 
 span.bd {
   white-space: pre-wrap;
-  border-style: inset;
+  border: 2px inset;
 }
 
 .code {
