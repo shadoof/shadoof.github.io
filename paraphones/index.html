@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Paraphones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <h1><i>Paraphones</i><h1>
+    <h2><i>for Garrett Stewart</i></h2>
+    <div id="nbparent" class="container"></div>
+
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+  import define from "https://api.observablehq.com/@shadoof/paraphonesweb.js?v=4";
+  
+  const parent = document.getElementById("nbparent");
+  new Runtime().module(define, name => {
+      if (name === undefined || !name.includes("css")) {
+      const container = document.createElement("div");
+      container.classList.add("container");
+      console.log(typeof name, name);
+      if (name) {
+        container.id = name;
+        if (name.startsWith("_")) container.style.display = "none";
+      }
+      parent.append(container);
+      return new Inspector(container);
+     }
+  });
+  </script>
+  </body>
+</html>

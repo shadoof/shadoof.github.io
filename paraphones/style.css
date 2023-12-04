@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'SourceSerif4';
+  src: local('Source Serif 4'),
+  url('../fonts/SourceSerif4-VariableFont_opsz,wght.woff2') format('woff2-variations'),
+  url('../fonts/SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype-variations')
+}
+
+@font-face {
+  font-family: 'SourceSerif4-Italic';
+  src: 
+  url('../fonts/SourceSerif4-Italic-VariableFont_opsz,wght.woff2') format('woff2-variations'),
+  url('../fonts/SourceSerif4-Italic-VariableFont_opsz,wght.ttf') format('truetype-variations')
+}
+
+/*@font-face {
+  font-family: 'NotoSerif';
+  src: local('Noto Serif'),
+  url('../fonts/NotoSerif-Regular.woff2') format('woff2'),
+  url('../fonts/NotoSerif-Regular.woff') format('woff'),
+  url('../fonts/NotoSerif-Regular.ttf') format('ttf')
+}*/
+
+@font-face {
+  font-family: 'NotoSans';
+  src: local('Noto Sans'),
+  url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+  url('../fonts/NotoSans-Regular.woff') format('woff'),
+  url('../fonts/NotoSans-Regular.ttf') format('ttf')
+}
+
+body {
+  max-width: 60vw;
+  margin-top: 1em auto;
+  margin-left: 5vw;
+  padding: 0 1em;
+  font-family: "SourceSerif4", serif;
+  font-size: 1.5vw;
+  font-variant-ligatures: no-common-ligatures;
+}
+
+a {
+  color: #4682b4;
+}
+
+a:visited {
+  color: #4682b4;
+}
+
+a:hover {
+  color: lightgrey;
+  text-decoration: none;
+}
+
+a:link:not(:hover) {
+  text-decoration: none;
+}
+
+cite {
+  font-family: SourceSerif4-Italic;
+}
+
+em {
+  font-family: "SourceSerif4", serif;
+  font-style: normal;
+  color: darkred; /* darkred is good for debugging with orange */
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: 600;
+  margin-top: .2rem;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+i {
+  font-family: SourceSerif4-Italic;
+}
+
+#nbparent h3 {
+  /*font-family: 'NotoSans', sans-serif;*/
+  letter-spacing: .1rem;
+}
+
+#nbparent h4 {
+  /*font-family: 'NotoSans', sans-serif;*/
+  letter-spacing: .1rem;
+}
+
+#nbparent table {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 1vw;
+  text-align: left;
+}
+
+#nbparent td {
+  padding: 0;
+}
+
+#nbparent td em {
+  font-family: 'NotoSans', sans-serif;
+}
+
+.container {
+  margin-top: 2rem;
+}
+
+  .fade { /* was: p#fade */
+    margin-bottom: 1em;
+    /*width: 75vw;*/
+    cursor: pointer;
+    transition: color .7s ease-in-out; /* vendorless fallback */
+    -o-transition: color .7s ease-in-out; /* opera */
+    -ms-transition: color .7s ease-in-out; /* IE 10 */
+    -moz-transition: color .7s ease-in-out; /* Firefox */
+    -webkit-transition: color .7s ease-in-out; /*safari and chrome */
+  }
+  
+  .fade:hover {
+    color: white;
+  }
+
+  div.pair {
+    position: relative;
+    display: inline-block;
+  }
+  .ph {
+    cursor: pointer;
+    margin-bottom: 1em;
+    /*width: 75vw;*/
+  }
+  .ph:hover > .pair > .guest {
+    opacity: 1;
+  }
+  .ph:hover > .pair > .host {
+    opacity: 0;
+  }
+  .host {
+    display: inline-block;
+    opacity: 1;
+    color: black;
+    transition: opacity .7s ease-in-out; /* vendorless fallback */
+    -o-transition: opacity .7s ease-in-out; /* opera */
+    -ms-transition: opacity .7s ease-in-out; /* IE 10 */
+    -moz-transition: opacity .7s ease-in-out; /* Firefox */
+    -webkit-transition: opacity .7s ease-in-out; /*safari and chrome */
+  }
+  .guest {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    color: darkred;
+    transition: opacity .7s ease-in-out; /* vendorless fallback */
+    -o-transition: opacity .7s ease-in-out; /* opera */
+    -ms-transition: opacity .7s ease-in-out; /* IE 10 */
+    -moz-transition: opacity .7s ease-in-out; /* Firefox */
+    -webkit-transition: opacity .7s ease-in-out; /*safari and chrome */
+  }
