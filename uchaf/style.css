@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Source Serif 4';
+  src: local('Source Serif 4'),
+  url('../fonts/SourceSerif4-VariableFont_opsz,wght.woff2') format('woff2-variations'),
+  url('../fonts/SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype-variations')
+}
+
+body {
+}
+
+.set {
+  position: relative;
+  white-space: pre;
+  font-family: 'Source Serif 4', serif;
+  font-size: 2.3vw;
+}
+
+.text {
+  position: absolute;
+  opacity: 0;
+  transition: all 1.5s ease-in-out; /* vendorless fallback */
+  -o-transition: all 1.5s ease-in-out; /* opera */
+  -ms-transition: all 1.5s ease-in-out; /* IE 10 */
+  -moz-transition: all 1.5s ease-in-out; /* Firefox */
+  -webkit-transition: all 1.5s ease-in-out; /*safari and chrome */
+}
+
+.text.visible {
+  opacity: 1;
+}
+
+#display {
+  position: relative;
+  margin-top: 1em;
+  margin-left: 0;
+  margin-right: auto;
+  background-color: floralwhite;
+  color: darkslategray;
+  /*cursor: none;*/
+  overflow: hidden;
+  width: 57vw; /* This value is calculated in the verseWidth cell, manually */
+  height: 45vw; /* This value is calculated in the verseHeight cell, manually */
+}
+
+.none {
+  display: none;
+}
+
+/*  */
+
+/*:root {
+  --ffam: NotoSerif, serif, monospace;
+  --fsize: 2.3vw;
+}*/
+
+/*#frame {
+  position: relative;
+  padding: 1vw;
+  min-width: 100vw;
+  min-height: 50vw;
+  background-color: black;
+  font-family: var(--ffam);
+  font-size: var(--fsize);
+  color: floralwhite;
+  cursor: none;
+  overflow: hidden;
+  margin-top: calc((100vh - 50vw) / 3);
+}*/
+
+/*#display {
+  position: relative;
+  top: 8vw;
+  left: 57vw;
+  min-height: 47.8vw;
+  background-color: black;
+}*/
+
+/*pre {
+  margin: 0;
+  font-family: var(--ffam);
+  font-size: var(--fsize);
+}*/
+
+/*img {
+  position: absolute;
+  top: -2.2vw;
+  left: -2.5vw;
+  opacity: 0;
+  height: 100%;
+  width: 55%;
+  filter: invert(1);
+  transition: opacity 1.5s ease-in-out; /* vendorless fallback *!/
+  -o-transition: opacity 1.5s ease-in-out; /* opera *!/
+  -ms-transition: opacity 1.5s ease-in-out; /* IE 10 *!/
+  -moz-transition: opacity 1.5s ease-in-out; /* Firefox *!/
+  -webkit-transition: opacity 1.5s ease-in-out; /*safari and chrome *!/
+}*/
+
+/*img.visible {
+  opacity: .4;
+}*/
+
+/*img.colophon {
+  opacity: 1;
+  height: calc(100% - 2vw);
+  width: auto;
+  top: 1vw;
+  left: 5vw;
+}*/
+
+/*.text {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* vendorless fallback *!/
+  -o-transition: opacity 1.5s ease-in-out; /* opera *!/
+  -ms-transition: opacity 1.5s ease-in-out; /* IE 10 *!/
+  -moz-transition: opacity 1.5s ease-in-out; /* Firefox *!/
+  -webkit-transition: opacity 1.5s ease-in-out; /*safari and chrome *!/
+}*/
+
+/*.text.visible {
+  opacity: 1;
+}*/
