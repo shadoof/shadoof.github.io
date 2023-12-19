@@ -6,6 +6,7 @@
 }
 
 body {
+  background-color: #001f3f;
 }
 
 .set {
@@ -32,10 +33,10 @@ body {
 #display {
   position: relative;
   margin-top: 1em;
-  margin-left: 0;
+  margin-left: auto;
   margin-right: auto;
-  background-color: floralwhite;
-  color: darkslategray;
+  background-color: #001f3f;
+  color: floralwhite;
   /*cursor: none;*/
   /*overflow: hidden;*/
   width: 57.5vw; /* This value is calculated in the verseWidth cell, manually */
