@@ -37,7 +37,7 @@ body {
   margin-right: auto;
   background-color: #001f3f;
   color: floralwhite;
-  /*cursor: none;*/
+  cursor: none;
   /*overflow: hidden;*/
   width: 57.5vw; /* This value is calculated in the verseWidth cell, manually */
   height: 45.5vw; /* This value is calculated in the verseHeight cell, manually */
