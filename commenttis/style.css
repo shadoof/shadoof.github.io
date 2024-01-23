@@ -44,9 +44,43 @@ body {
   margin: 5vw 15vw;
 }
 
+h2 {
+	font-size: 100%;
+	/* line-height: 1.4; /* 16pt *!/*/
+	margin-top: .4vw;
+	margin-bottom: 1.6vw;
+/*	font-size: 11pt;
+	line-height: 16pt;
+	margin-top: 4pt;
+	margin-bottom: 8pt;*/
+	letter-spacing: .3em;
+	border-bottom: 1px dotted #7f7f7f;
+	color: #666; /*a9a9a9;*/
+}
+
 #display {
+  font: 3vw/1.4 CenturySchoolbook, serif;
   color: black; /* orange is good for debugging */
   font-variant-ligatures: no-common-ligatures;
+  margin: 5vw 1vw;
+}
+
+#display p {
+	font-size: 1.5vw;
+	line-height: 1.4;
+	margin-top: .5vw;
+	margin-bottom: 1.5vw;
+}
+
+#display em {
+  /* font-family: monospace; */
+  font-style: normal;
+  /* font-weight: bold; */
+  color: black; /* darkred is good for debugging with orange */
+}
+
+#supplytext {
+  display: none;
 }
 
 .fade { 
@@ -59,12 +93,5 @@ body {
 }
 
 .fade:hover {
-  color: white;
-}
-
-em {
-  /* font-family: monospace; */
-  font-style: normal;
-  /* font-weight: bold; */
-  color: black; /* darkred is good for debugging with orange */
+  color: lightblue;
 }
