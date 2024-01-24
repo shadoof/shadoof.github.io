@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta property="og:title" content="Rotator">
+		<meta property="og:author" content="Nick Montfort">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content="A poem by Nick Montfort for Taper #11" />
+		<meta property="og:image" content="https://taper.badquar.to/11/images/rotator.jpg">
+		<meta property="og:url" content="https://taper.badquar.to/11/rotator.html">	
+		<title>Rotator (Taper #11)</title>
+
+<!-- “Rotator” Copyright (C) 2023 Nick Montfort
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright 
+notice and this notice are preserved. This file is offered as-is,
+without any warranty.
+
+This is from Taper #11: Parallels, Fall 2023:
+
+https://taper.badquar.to/11/rotator.html
+
+///
+
+Directed line segments PQ and QP are parallel.
+
+///
+
+I’ve chosen to present this code in a way that is (I hope)
+understandable, having also used some standard techniques that can make 
+JavaScript computational poems more concise.
+
+If you wanted to minimize this code, you would eliminate the comments
+and all the spaces. At the end of lines, where you see “,” or “;” now,
+those would be removed because a line break by itself is sufficent to
+separate assignments or statements. Finally, some code blocks beginning
+with “{” and ending with “}” would not be necessary, because a single
+statement can be used without enclosing it in brackets.
+
+In these regards only, my code is “expanded” to make it easier to read.
+But I have employed the methods I typically use to reduce code size —
+and commented on most of these. There are other techniques I used but
+didn’t mention in comments. For instance, counting down in a for loop:
+
+for(h=60;h--;)
+
+is shorter than counting up:
+
+for(h=0;h++<60;)
+for(h=0;h<60;h++)
+
+Do you want to set something to recur every tenth of a second?
+
+setInterval(g,100);
+
+Change 100 to 99! People can’t perceive the difference and it saves a
+character:
+
+setInterval(g,99);
+
+In any case — my computational poem “Rotator” is offered as a poetic
+artifact for you to enjoy, but also as way for you to learn a bit more
+about concise JavaScript coding of computational poems.
+
+-->
+
+<style>
+  body { margin:0 ; overflow:hidden }
+  a { color:#eee ; text-decoration:none }
+  header { margin:0 ; padding:0 ; background-color:#444 ; color:#bbb ;
+    position:relative ; z-index:1000 }
+  header > h1 { margin:0 ; font-size:12px ; font-family:sans-serif ;
+    border-bottom:1px #999 solid ; padding:5px 10px ; line-height:17px }
+</style>
+</head>
+<body>
+<header id=nav>
+	<h1>
+		<a href="infinite_scroll.html">&lt;&lt;</a> &nbsp; 
+		<a href="index.html">Taper #11 :
+		Parallels</a> : Fall 2023 &nbsp; 
+		<a href="yi_yi.html">&gt;&gt;</a><br>
+		<a href="rotator.html">“Rotator”</a> by
+		<a href="about.html#montfort">Nick Montfort</a>
+	</h1>
+</header>
+<div style=margin:0;position:absolute;top:50%;left:50%;-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)>
+	<div id=x style="font-family:monospace;font-size:clamp(.8rem,1.2vw,4rem)"></div>
+</div>
+<script>
+a = '←↖↑↗→↘↓↙'.split(''), // Shorter than ['←',...
+t = 'AhaAreneraDeedDeifiedDewedDidEkeEreEseÉtéEveEyeGagGigIciLevelMemMinimNomonNonNoonOgopogoOhoOjoOroOvoPopRedderReferReifierReturruterReviverRotatorRotavatorRotorSagasSayasSexesSolosSomosStatsTattarrattatTenetTôtLaminaAnimalEraAreEtaAteDivaAvidDrabBardTubedDebutLacedDecalReviledDeliverReinerDenierSuedDeusLivedDevilLiveEvilMoodDoomTideEditTimeEmitSoreErosReliveEvilerSerifFiresBragGarbLegGelDogGodPlugGulpSleekKeelsPalLapRevelLeverRetoolLooterStrapPartsStarRatsTinkerReknitDeifierReifiedWolfFlowWolferReflowLeerReelTimerRemitDevasSavedTapsSpatSnapsSpansTipsSpitDrawWardDrawsSwardGamMeetTeemLootToolRawWarRepatTaperReportTroperLagGalElitTileSpiderRedipsO'.split(/(?=[A-ZÉ])/),
+// Even with .toLowerCase(), shorter than ['Aha',...
+r = Math.random, // Shorter, as random() is called more than once
+b = 0,
+l = [],
+w = [],
+j = [];
+function go() {
+	if (b++ < 271 && b % 9 == 0) { // For the first 270ms, each 9 ticks:
+		z = t[0 ^ r() * 142]; // Pick word 0-141. 0^ converts to integer
+		w.push(z);
+		k = 12; // Pick the middle row
+		while (l.includes(k)) {
+			k = 0 ^ r() * (30); // Choose until k is an unused row
+		}
+		l.push(k, 0 ^ r() * (60 - z.length) + 99); // Pick the row for the word
+	}
+	if (b > 550) { // After 550ms, restart
+		b = 0,
+		l = [],
+		w = [];
+	}
+	p = '';
+	for (v = 25; v--;) { // Build the grid
+		q = '';
+		for (h = 60; h--;) { // A full row of arrows
+			q += a[0 ^ r() * 8];
+		}
+		i = l.indexOf(v);
+		if (i > -1) { // Replace some with a word if this row has one
+			c = l[i + 1] - 99;
+			q = q.slice(0, c) + w[i / 2].toLowerCase() + q.slice(c, 60 - w[i / 2].length);
+		}
+		p += q + '<br>'
+	}
+	x.innerHTML = p;
+}
+setInterval(go, 99);
+</script>
+</body>
+</html>
