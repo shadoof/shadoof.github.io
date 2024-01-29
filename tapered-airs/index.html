@@ -1,71 +1,8 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Tapered Airs (Taper #12)</title>
-
-<!-- “Tapered Airs” Copyright (C) 2024 John Cayley
-
-Copying and distribution of this file, with or without modification,
-are permitted in any medium without royalty provided the copyright 
-notice and this notice are preserved. This file is offered as-is,
-without any warranty.
-
-This is from Taper #12: Tools, Spring 2024:
-
-https://taper.badquar.to/12/tapered-airs.html
-
-... your creative statement here ...
-
--->
-
-<style>
-	body { margin:0 ; overflow:hidden }
-	a { color:#eee ; text-decoration:none }
-	header { margin:0 ; padding:0 ; background-color:#444 ; color:#bbb ;
-		position:relative ; z-index:1000 }
-	header > h1 { margin:0 ; font-size:12px ; font-family:sans-serif ;
-		border-bottom:1px #999 solid ; padding:5px 10px ; line-height:17px }
-</style>
-</head>
-<body>
-<header id=nav>
-	<h1>
-		<a href="prev.html">&lt;&lt;</a> &nbsp; 
-		<a href="index.html">Taper #12 :
-		Tools</a> : Spring 2024 &nbsp; 
-		<a href="next.html">&gt;&gt;</a><br>
-		<a href="tapered-airs.html">“Tapered Airs”</a> by
-		<a href="about.html#cayley">John Cayley</a>
-	</h1>
-</header> 
-<textarea style="width: 40vw; height: 9vw">compose a brief air here
-	as I have done
-where lines and white space count
-	and let us
-	place   then
-	read    our words
-</textarea>
-<div id="s" style="white-space: pre"></div>
-<script>
-a = () => {
-	newText='';
-  text = document.querySelector('textarea').innerHTML;
-  spelStart = text.search(/\S/); // find the first spel by finding first nonwhitespace
-  while (spelStart != -1) {
-    newText += text.substr(0, spelStart); // grab everything up to that point
-    text = text.substr(spelStart); // put the rest in text
-    spelEnd = text.search(/\s/); // find where whitespace starts again
-    if (spelEnd == -1) spelEnd = text.length; // text ends with nonwhitespace
-    // wrap the spel we've found in span tags
-    newText += `<span>` + text.substr(0, spelEnd) + `</span>`; // add this to newText
-    text = text.substr(spelEnd); // put the rest in text
-    spelStart = text.search(/\S/); // find the next nonwhitespace (if any)
-  }
-  // return `<pre class="set">${newText}</pre>`; // wrap in pre tags of same class
-	document.querySelector('#s').innerHTML = newText;
-}
-a();
-</script>
-</body>
-</html>
+<html>    
+  <head>      
+    <title>Tapered Airs</title>      
+    <meta http-equiv="refresh" content="0;URL='tapered-airs.html'" />    
+  </head>    
+  <body> 
+  </body>  
+</html>     

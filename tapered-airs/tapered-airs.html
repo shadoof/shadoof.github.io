@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tool for Tapered Airs (Taper #12)</title>
+
+  <!-- “Tool for Tapered Airs” Copyright (C) 2024 John Cayley
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright 
+notice and this notice are preserved. This file is offered as-is,
+without any warranty.
+
+This is from Taper #12: Tools, Spring 2024:
+
+https://taper.badquar.to/12/tapered-airs.html
+
+Part of a long-standing project to support the animation of poetic
+text, this tapered tool will allow you to compose your own ‘air’
+in the textarea that appears once its built-in composition has played.
+
+To explore a more elaborate version of my developing web-stack tools
+for ‘Scoring the Spelt Air’ please visit observablehq.com/@shadoof/stsa.
+There you'll find a live code notebook with plenty of commentary. It will
+soon be accompanied by an essay forthcoming later in 2024, and I'll make
+an open access pdf available at programmatology.com when this is published.
+
+You can interrupt my default composition by clicking the ‘stop’ button.
+Once the default air has played or you have interrupted:
+• Compose your own air, spacing out your words in the ‘open field.’
+• If there is any magic to this little code, this in the t() time-to-read
+  function:
+  - The display-time of each word is increased according to the number of 
+    its vowels and by attached common punction (not used in my default).
+  - Time is also added for spaces before each word, about 75ms per space.
+  - A blank line does not add time unless it contains spaces.
+• You can change the ‘rate’ of the overall animation by entering a factor,
+  e.g. 2 for twice the speed.
+• ‘fades’ roughly determines the number of words that are displayed before
+  they begin to fade out. If you set this to 0 there will not be any
+  trailing fades.
+• Please note that there is is a seven-second pause at the end of each 
+  animation, after which, if still being displayed, the entire air will be
+  faded out.
+
+SELECT AND COPY any composition that you want to SAVE. It will not persist from
+session to session or whenever you reload the page. Please do copy and edit the
+source code. During the early stages of doing this, you will find the millisecond
+pauses calculated by t() in the g[] array.
+
+ANIMATE YOUR SPELT AIRS NOW ! And please enjoy. - John
+
+-->
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden
+    }
+
+    a {
+      color: #eee;
+      text-decoration: none
+    }
+
+    header {
+      margin: 0;
+      padding: 0;
+      background-color: #444;
+      color: #bbb;
+      position: relative;
+      z-index: 1000
+    }
+
+    header>h1 {
+      margin: 0;
+      font-size: 12px;
+      font-family: sans-serif;
+      border-bottom: 1px #999 solid;
+      padding: 5px 10px;
+      line-height: 17px
+    }
+  </style>
+</head>
+
+<body>
+  <header id=nav>
+    <h1>
+      <a href="prev.html">&lt;&lt;</a> &nbsp;
+      <a href="index.html">Taper #12 :
+        Tools</a> : Spring 2024 &nbsp;
+      <a href="next.html">&gt;&gt;</a><br>
+      <a href="tapered-airs.html">“Tool for Tapered Airs”</a> by
+      <a href="about.html#cayley">John Cayley</a>
+    </h1>
+  </header>
+<style>body{font-size: 1.3vw;background-color: floralwhite} input{width: 2vw} div,textarea{display:block;white-space:pre;width:40vw;height:40vw;margin:3vw auto;padding-left:2vw;font: 2.5vw serif} span{opacity:1;transition:all 1.5s ease-in-out;-o-transition:all 1.5s ease-in-out;-ms-transition:all 1.5s ease-in-out;-moz-transition:all 1.5s ease-in-out;-webkit-transition:all 1.5s ease-in-out} span.i{opacity: 0}</style>
+<p>&nbsp;<input id=b type=button value=⏹ onclick=q() style=height:1.7vw> rate <input id=y type=text value=1> fades <input id=f type=text value=12></p>
+<textarea id=x onchange=a()>compose a brief air here
+    as I have done
+  whose lines and white space    count
+
+               now
+  let us
+             place
+      and read   our words
+                       in   time
+</textarea>
+<div id=d style="padding:1px 1px 1px 2vw"></div>
+<script>g=[],k="⏹",m="⏵",c=[],z=1
+i=(l)=>document.querySelector('#'+l)
+ii=(l,f)=>l.addEventListener("input",f)
+b=i('b')
+d=i('d')
+x=i('x')
+n=x.value
+ii(x,()=>n=x.value)
+y=i('y')
+f=y.value
+ii(y,()=>{f=y.value;a()})
+yy=i('f')
+ff=yy.value
+ii(yy,()=>{ff=yy.value})
+t=(w,i,s)=>{g[i]=(300+w.match(/[aeiouy,:;\.\?]/gi).length*150)/f;if(i-1>-1)g[i-1]+=(s.length*75)/f}
+r=(t)=>new Promise(r=>setTimeout(r,t))
+v=(e)=>e.classList.remove("i")
+u=(e)=>e.classList.add("i")
+a=()=>{
+let h='',i=0,o=n,s=o.search(/\S/)
+while(s!=-1){
+let r=o.substr(0,s)
+h+=r
+o=o.substr(s)
+l=o.search(/\s/)
+if(l==-1)l=o.length
+w=o.substr(0,l)
+h+=`<span>${w}</span>`
+t(w,i++,r)
+o=o.substr(l)
+s=o.search(/\S/)
+}
+d.innerHTML=h
+}
+a()
+p=async()=>{
+x.style.display='none'
+c=Array.from(d.children)
+c.forEach(e=>u(e))
+await r(2000)
+for(const[i,e]of c.entries()){
+if(z==0)break
+v(e)
+if(ff>0)new Promise(()=>setTimeout(()=>u(e),ff*700/f))
+await r(g[i])
+}
+if(z==1)await r(7000)
+c.forEach(e=>u(e))
+if(z==1)await r(3000)
+x.style.display='block'
+b.value=m
+}
+p()
+q=()=>{
+if(b.value==m){
+z=1
+b.value=k
+p()
+return
+}
+z=0
+c.forEach(e=>u(e))
+b.value=m
+}
+</script>
+</body>
+
+</html>
