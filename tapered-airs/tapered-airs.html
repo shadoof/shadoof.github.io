@@ -40,7 +40,7 @@ Once the default air has played or you have interrupted:
 • ‘fades’ roughly determines the number of words that are displayed before
   they begin to fade out. If you set this to 0 there will not be any
   trailing fades.
-• Please note that there is is a seven-second pause at the end of each 
+• Please note that there is a seven-second pause at the end of each 
   animation, after which, if still being displayed, the entire air will be
   faded out.
 
@@ -95,84 +95,62 @@ ANIMATE YOUR SPELT AIRS NOW ! And please enjoy. - John
       <a href="about.html#cayley">John Cayley</a>
     </h1>
   </header>
-<style>body{font-size: 1.3vw;background-color: floralwhite} input{width: 2vw} div,textarea{display:block;white-space:pre;width:40vw;height:40vw;margin:3vw auto;padding-left:2vw;font: 2.5vw serif} span{opacity:1;transition:all 1.5s ease-in-out;-o-transition:all 1.5s ease-in-out;-ms-transition:all 1.5s ease-in-out;-moz-transition:all 1.5s ease-in-out;-webkit-transition:all 1.5s ease-in-out} span.i{opacity: 0}</style>
-<p>&nbsp;<input id=b type=button value=⏹ onclick=q() style=height:1.7vw> rate <input id=y type=text value=1> fades <input id=f type=text value=12></p>
-<textarea id=x onchange=a()>compose a brief air here
-    as I have done
-  whose lines and white space    count
+  <style>
+    body {
+      font-size: 1.3vw;
+      background-color:floralwhite
+    }
 
-               now
+    input {
+      width: 2vw
+    }
+
+    div,
+    textarea {
+      display: block;
+      white-space: pre;
+      width: 40vw;
+      height: 40vw;
+      margin: 3vw auto;
+      padding-left: 2vw;
+      font: 2.5vw serif
+    }
+
+    span {
+      opacity: 1;
+      transition: all 1.5s ease-in-out;
+      -o-transition: all 1.5s ease-in-out;
+      -ms-transition: all 1.5s ease-in-out;
+      -moz-transition: all 1.5s ease-in-out;
+      -webkit-transition: all 1.5s ease-in-out
+    }
+
+    span.i {
+      opacity: 0
+    }
+  </style>
+  <p>&nbsp;<input id=b type=button value=⏹ onclick=q() style=height:1.7vw> rate <input id=y type=text value=1> fades <input id=f type=text value=12></p>
+  <textarea id=x onchange=a()>Compose a brief air here,
+      (as I have done)
+  where lines and white space    count.
+
+               Now,
   let us
              place
-      and read   our words
-                       in   time
+      and read    our words
+                        in   time.
 </textarea>
 <div id=d style="padding:1px 1px 1px 2vw"></div>
-<script>g=[],k="⏹",m="⏵",c=[],z=1
-i=(l)=>document.querySelector('#'+l)
-ii=(l,f)=>l.addEventListener("input",f)
-b=i('b')
-d=i('d')
-x=i('x')
-n=x.value
-ii(x,()=>n=x.value)
-y=i('y')
-f=y.value
-ii(y,()=>{f=y.value;a()})
-yy=i('f')
-ff=yy.value
-ii(yy,()=>{ff=yy.value})
-t=(w,i,s)=>{g[i]=(300+w.match(/[aeiouy,:;\.\?]/gi).length*150)/f;if(i-1>-1)g[i-1]+=(s.length*75)/f}
-r=(t)=>new Promise(r=>setTimeout(r,t))
-v=(e)=>e.classList.remove("i")
-u=(e)=>e.classList.add("i")
-a=()=>{
-let h='',i=0,o=n,s=o.search(/\S/)
-while(s!=-1){
-let r=o.substr(0,s)
-h+=r
-o=o.substr(s)
-l=o.search(/\s/)
-if(l==-1)l=o.length
-w=o.substr(0,l)
-h+=`<span>${w}</span>`
-t(w,i++,r)
-o=o.substr(l)
-s=o.search(/\S/)
-}
-d.innerHTML=h
-}
-a()
-p=async()=>{
-x.style.display='none'
-c=Array.from(d.children)
-c.forEach(e=>u(e))
-await r(2000)
-for(const[i,e]of c.entries()){
-if(z==0)break
-v(e)
-if(ff>0)new Promise(()=>setTimeout(()=>u(e),ff*700/f))
-await r(g[i])
-}
-if(z==1)await r(7000)
-c.forEach(e=>u(e))
-if(z==1)await r(3000)
-x.style.display='block'
-b.value=m
-}
-p()
-q=()=>{
-if(b.value==m){
-z=1
-b.value=k
-p()
-return
-}
-z=0
-c.forEach(e=>u(e))
-b.value=m
-}
+<script>
+g=[],k="⏹",m="⏵",c=[],z=1,i=(e=>document.querySelector("#"+e)),ii=((e,a)=>e.addEventListener("input",a)),b=i("b"),d=i("d"),x=i("x"),n=x.value,ii(x,()=>n=x.value),y=i("y"),f=y.value,ii(y,()=>{f=y.value,a()}),yy=i("f"),ff=yy.value,ii(yy,()=>{ff=yy.value}),
+t=((e,a,i)=>{let t=e.match(/[aeiouy,:;\.\?]/gi);t&&(g[a]=(300+150*t.length)/f),a-1>-1&&(g[a-1]+=75*i.length/f)}),
+r=(e=>new Promise(a=>setTimeout(a,e))),
+v=(e=>e.classList.remove("i")),u=(e=>e.classList.add("i")),
+a=(()=>{let e="",a=0,i=n,r=i.search(/\S/);for(;-1!=r;){let s=i.substr(0,r);e+=s,i=i.substr(r),l=i.search(/\s/),-1==l&&(l=i.length),w=i.substr(0,l),e+=`<span>${w}</span>`,t(w,a++,s),i=i.substr(l),r=i.search(/\S/)}d.innerHTML=e}),
+a(),
+p=(async()=>{x.style.display="none",c=Array.from(d.children),c.forEach(e=>u(e)),await r(2e3);for(const[e,a]of c.entries()){if(0==z)break;v(a),ff>0&&new Promise(()=>setTimeout(()=>u(a),700*ff/f)),await r(g[e])}1==z&&await r(7e3),c.forEach(e=>u(e)),1==z&&await r(3e3),x.style.display="block",b.value=m}),
+p(),
+q=(()=>{if(b.value==m)return z=1,b.value=k,void p();z=0,c.forEach(e=>u(e)),b.value=m});
 </script>
 </body>
-
 </html>
