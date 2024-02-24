@@ -38,6 +38,30 @@ body {
   opacity: 1;
 }
 
+#byline {
+  z-index: 10;
+  font: lighter 1vw/6vw Arial;
+  color: gray;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .5s ease-in-out 0s;
+}
+
+#byline a {
+  color: gray;
+  text-decoration: none;
+}
+
+#byline:hover {
+  opacity: 1;
+}
+
+#bytext {
+  padding-top: 1vw;
+  vertical-align: top;
+  cursor: default;
+}
+
 #display {
   position: relative;
   margin-top: 1em;
