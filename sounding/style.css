@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Source Serif 4';
   src: local('Source Serif 4'),
-  url('../fonts/SourceSerif4-VariableFont_opsz,wght.woff2') format('woff2-variations'),
-  url('../fonts/SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype-variations')
+    url('../fonts/SourceSerif4-VariableFont_opsz,wght.woff2') format('woff2-variations'),
+    url('../fonts/SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype-variations')
 }
 
 :root {
@@ -11,7 +11,7 @@
   --wvw: 27vw;
   --hvw: 50vw;
 }
-  
+
 body {
   background-color: #001f3f;
   font-family: 'Source Serif 4', serif;
@@ -27,11 +27,16 @@ body {
 .text {
   position: absolute;
   opacity: 0;
-  transition: all 1.5s ease-in-out; /* vendorless fallback */
-  -o-transition: all 1.5s ease-in-out; /* opera */
-  -ms-transition: all 1.5s ease-in-out; /* IE 10 */
-  -moz-transition: all 1.5s ease-in-out; /* Firefox */
-  -webkit-transition: all 1.5s ease-in-out; /*safari and chrome */
+  transition: all 1.5s ease-in-out;
+  /* vendorless fallback */
+  -o-transition: all 1.5s ease-in-out;
+  /* opera */
+  -ms-transition: all 1.5s ease-in-out;
+  /* IE 10 */
+  -moz-transition: all 1.5s ease-in-out;
+  /* Firefox */
+  -webkit-transition: all 1.5s ease-in-out;
+  /*safari and chrome */
 }
 
 .text.visible {
@@ -40,11 +45,18 @@ body {
 
 #byline {
   z-index: 10;
-  font: lighter 1vw/6vw Arial;
+  padding-top: 1vw;
+  padding-left: 4vw;
+  /*font: lighter 1vw/6vw Arial;*/
+  font-size: .8em;
   color: gray;
   cursor: pointer;
   opacity: 0;
   transition: opacity .5s ease-in-out 0s;
+}
+
+#byline:hover {
+  opacity: 1;
 }
 
 #byline a {
@@ -52,32 +64,33 @@ body {
   text-decoration: none;
 }
 
-#byline:hover {
-  opacity: 1;
+#byline a:hover {
+  color: lightgray;
 }
 
 #bytext {
-  padding-top: 1vw;
   vertical-align: top;
-  cursor: default;
 }
 
 #display {
   position: relative;
   margin-top: 1em;
+  /* 1em */
   margin-left: auto;
   margin-right: auto;
   background-color: #001f3f;
   color: floralwhite;
   cursor: none;
   /*overflow: hidden;*/
-  width: 60vw; /* This value is calculated in the verseWidth cell, manually *!/*/
+  width: 60vw;
+  /* This value is calculated in the verseWidth cell, manually *!/*/
   height: var(--hvw);
 }
 
 #frame {
   position: relative;
 }
+
 .none {
   display: none;
 }
