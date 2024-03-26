@@ -29,10 +29,10 @@ an open access pdf available at programmatology.com when this is published.
 You can interrupt my default composition by clicking the ‘stop’ button.
 Once the default air has played or you have interrupted:
 • Compose your own air, spacing out your words in the ‘open field.’
-• If there is any magic to this little code, this in the t() time-to-read
+• If there is any magic to my tapered code, this in the t() time-to-read
   function:
   - The display-time of each word is increased according to the number of 
-    its vowels and by attached common punction (not used in my default).
+    its vowels and by common punction.
   - Time is also added for spaces before each word, about 75ms per space.
   - A blank line does not add time unless it contains spaces.
 • You can change the ‘rate’ of the overall animation by entering a factor,
@@ -40,16 +40,20 @@ Once the default air has played or you have interrupted:
 • ‘fades’ roughly determines the number of words that are displayed before
   they begin to fade out. If you set this to 0 there will not be any
   trailing fades.
-• Please note that there is a seven-second pause at the end of each 
-  animation, after which, if still being displayed, the entire air will be
-  faded out.
+• Please note that there is a short pause at the end of each 
+  animation, after which, if any of the air is still being displayed, 
+  it will be faded out.
+
+By the way, once you have composed, experimenting with ‘rate’ and ‘fades’ is 
+fun, with any text. Try, for example, rate .8 and fades 1.
 
 SELECT AND COPY any composition that you want to SAVE. It will not persist from
 session to session or whenever you reload the page. Please do copy and edit the
-source code. During the early stages of doing this, you will find the millisecond
-pauses calculated by t() in the g[] array.
+source code (hand-minimized for slightly easier reading). During the early 
+stages of doing this, you will find the millisecond pauses calculated by t() in 
+the g[] array.
 
-ANIMATE YOUR SPELT AIRS NOW ! And please enjoy. - John
+ANIMATE YOUR SPELT AIRS NOW !  And please, enjoy. - John
 
 -->
 
@@ -95,62 +99,95 @@ ANIMATE YOUR SPELT AIRS NOW ! And please enjoy. - John
       <a href="about.html#cayley">John Cayley</a>
     </h1>
   </header>
-  <style>
-    body {
-      font-size: 1.3vw;
-      background-color:floralwhite
-    }
+<style>body{font-size:1.3vw}
+input{width:2vw}
+div,textarea{display:block;white-space:pre;width:40vw;height:40vw;margin:3vw auto 20vw;padding-left:2vw;font:2.5vw serif}
+span{opacity:1;transition:all 1.5s ease-in-out;-o-transition:all 1.5s ease-in-out;-ms-transition:all 1.5s ease-in-out;-moz-transition:all 1.5s ease-in-out;-webkit-transition:all 1.5s ease-in-out}
+span.i{opacity:0}
+</style>
+<p>&nbsp;<input id=b type=button value=⏹ onclick=q() style=height:1.7vw>
+rate <input id=y type=text value=1>
+fades <input id=f type=text value=14>
+</p>
+<textarea id=x onchange=a()>Compose a brief air here,
+    (as I have done)       
+where lines  and   white space    count.
 
-    input {
-      width: 2vw
-    }
-
-    div,
-    textarea {
-      display: block;
-      white-space: pre;
-      width: 40vw;
-      height: 40vw;
-      margin: 3vw auto;
-      padding-left: 2vw;
-      font: 2.5vw serif
-    }
-
-    span {
-      opacity: 1;
-      transition: all 1.5s ease-in-out;
-      -o-transition: all 1.5s ease-in-out;
-      -ms-transition: all 1.5s ease-in-out;
-      -moz-transition: all 1.5s ease-in-out;
-      -webkit-transition: all 1.5s ease-in-out
-    }
-
-    span.i {
-      opacity: 0
-    }
-  </style>
-  <p>&nbsp;<input id=b type=button value=⏹ onclick=q() style=height:1.7vw> rate <input id=y type=text value=1> fades <input id=f type=text value=12></p>
-  <textarea id=x onchange=a()>Compose a brief air here,
-      (as I have done)
-  where lines and white space    count.
-
-               Now,
-  let us
-             place
-      and read    our words
-                        in   time.
+             Now,
+let us
+           place
+    and read    our words
+                      in   time.
 </textarea>
-<div id=d style="padding:1px 1px 1px 2vw"></div>
-<script>
-g=[],k="⏹",m="⏵",c=[],z=1,i=(e=>document.querySelector("#"+e)),ii=((e,a)=>e.addEventListener("input",a)),b=i("b"),d=i("d"),x=i("x"),n=x.value,ii(x,()=>n=x.value),y=i("y"),f=y.value,ii(y,()=>{f=y.value,a()}),yy=i("f"),ff=yy.value,ii(yy,()=>{ff=yy.value}),
-t=((e,a,i)=>{let t=e.match(/[aeiouy,:;\.\?]/gi);t&&(g[a]=(300+150*t.length)/f),a-1>-1&&(g[a-1]+=75*i.length/f)}),
-r=(e=>new Promise(a=>setTimeout(a,e))),
-v=(e=>e.classList.remove("i")),u=(e=>e.classList.add("i")),
-a=(()=>{let e="",a=0,i=n,r=i.search(/\S/);for(;-1!=r;){let s=i.substr(0,r);e+=s,i=i.substr(r),l=i.search(/\s/),-1==l&&(l=i.length),w=i.substr(0,l),e+=`<span>${w}</span>`,t(w,a++,s),i=i.substr(l),r=i.search(/\S/)}d.innerHTML=e}),
-a(),
-p=(async()=>{x.style.display="none",c=Array.from(d.children),c.forEach(e=>u(e)),await r(2e3);for(const[e,a]of c.entries()){if(0==z)break;v(a),ff>0&&new Promise(()=>setTimeout(()=>u(a),700*ff/f)),await r(g[e])}1==z&&await r(7e3),c.forEach(e=>u(e)),1==z&&await r(3e3),x.style.display="block",b.value=m}),
-p(),
-q=(()=>{if(b.value==m)return z=1,b.value=k,void p();z=0,c.forEach(e=>u(e)),b.value=m});
+<div id=d style="padding:1px 1px 1px 2vw;"></div>
+<script>g=[],k="⏹",m="⏵",c=[],z=1
+i=(l)=>document.querySelector('#'+l)
+ii=(l,f)=>l.addEventListener("input",f)
+b=i('b')
+d=i('d')
+x=i('x')
+xx=(s)=>x.style.display=s
+n=x.value
+ii(x,()=>n=x.value)
+y=i('y')
+f=y.value
+ii(y,()=>{f=y.value;xx('none');a();xx('block')})
+yy=i('f')
+ff=yy.value;
+ii(yy,()=>{ff=yy.value})
+t=(w,i,s)=>{j=w.match(/[aeiouy,:;\.\?]/gi);if(j)g[i]=(300+j.length*150)/f;if(i-1>-1)g[i-1]+=(s.length*75)/f}
+r=(t)=>new Promise(r=>setTimeout(r,t))
+v=(e)=>e.classList.remove("i")
+u=(e)=>e.classList.add("i")
+uu=()=>c.forEach(e=>u(e))
+a=()=>{
+h='',i=0,o=n,s=o.search(/\S/)
+while(s!=-1){
+let r=o.substr(0,s)
+h+=r
+o=o.substr(s)
+l=o.search(/\s/)
+if(l==-1)l=o.length
+w=o.substr(0,l)
+h+=`<span>${w}</span>`
+t(w,i++,r)
+o=o.substr(l)
+s=o.search(/\S/)
+}
+d.innerHTML=h
+}
+a()
+p=async()=>{
+xx('none')
+c=Array.from(d.children)
+uu()
+await r(2000)
+for(const[i,e]of c.entries()){
+if(z==0)break
+v(e)
+rr=ff*700/f
+if(ff>0)new Promise(()=>setTimeout(()=>u(e),rr))
+await r(g[i])
+}
+if(z==1)await r(ff==0?7000:rr)
+uu()
+if(z==1)await r(3000)
+xx('block')
+b.value=m;
+}
+p()
+q=()=>{
+if(b.value==m){
+z=1
+b.value=k
+p()
+return
+}
+z=0
+uu()
+b.value=m
+}
 </script>
 </body>
+
 </html>

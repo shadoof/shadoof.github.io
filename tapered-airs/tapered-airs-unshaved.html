@@ -32,7 +32,7 @@ Once the default air has played or you have interrupted:
 • If there is any magic to this little code, this in the t() time-to-read
   function:
   - The display-time of each word is increased according to the number of 
-    its vowels and by attached common punction (not used in my default).
+    its vowels and by common punction (not used in my default).
   - Time is also added for spaces before each word, about 75ms per space.
   - A blank line does not add time unless it contains spaces.
 • You can change the ‘rate’ of the overall animation by entering a factor,
@@ -129,17 +129,17 @@ ANIMATE YOUR SPELT AIRS NOW ! And please enjoy. - John
     }
   </style>
   <p>&nbsp;<input id=b type=button value=⏹ onclick=q() style=height:1.7vw> rate <input id=y type=text value=1> fades
-    <input id=f type=text value=10>
+    <input id=f type=text value=12>
   </p>
-  <textarea id=x onchange=a()>compose a brief air here
-    as I have done
-  whose lines and white space    count
+  <textarea id=x onchange=a()>Compose a brief air here,
+    (as I have done)       
+where lines  and   white space    count.
 
-               now
-  let us
-             place
-      and read   our words
-                       in   time
+             Now,
+let us
+           place
+    and read    our words
+                      in   time.
 </textarea>
   <div id=d style="padding:1px 1px 1px 2vw;"></div>
   <script>
@@ -157,7 +157,7 @@ ANIMATE YOUR SPELT AIRS NOW ! And please enjoy. - John
     yy = i('f')
     ff = yy.value;
     ii(yy, () => { ff = yy.value })
-    t = (w, i, s) => { g[i] = (300 + w.match(/[aeiouy,:;\.\?]/gi).length * 150) / f; if (i - 1 > -1) g[i - 1] += (s.length * 75) / f }
+    t = (w, i, s) => { j = w.match(/[aeiouy,:;\.\?]/gi); if (j) g[i] = (300 + j.length * 150) / f; if (i - 1 > -1) g[i - 1] += (s.length * 75) / f }
     r = (t) => new Promise(r => setTimeout(r, t))
     v = (e) => e.classList.remove("i")
     u = (e) => e.classList.add("i")
