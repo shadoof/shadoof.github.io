@@ -47,9 +47,9 @@ body {
 #byline {
   z-index: 10;
   padding-top: 1vw;
-  padding-left: 4vw;
+  padding-left: 5vw;
   /*font: lighter 1vw/6vw Arial;*/
-  font-size: .8em;
+  font-size: 1.4vw;
   color: gray;
   cursor: pointer;
   opacity: 0;
