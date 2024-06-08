@@ -17,27 +17,26 @@ import {define} from "./_observablehq/client.js";
 import {registerFile} from "./_observablehq/stdlib.js";
 
 registerFile("./data/limageinhii-0.json", {"name":"./data/limageinhii-0.json","mimeType":"application/json","path":"./_file/data/limageinhii-0.02627d57.json","lastModified":1717773657147});
-registerFile("./data/supplyHTML.json", {"name":"./data/supplyHTML.json","mimeType":"application/json","path":"./_file/data/supplyHTML.6eea60dd.json","lastModified":1717797250905});
+registerFile("./data/supplyHTML.json", {"name":"./data/supplyHTML.json","mimeType":"application/json","path":"./_file/data/supplyHTML.6eea60dd.json","lastModified":1717814755838});
 
-define({id: "67bf4fa5", inputs: ["FileAttachment"], outputs: ["paras","spels","displayElem","addSpans","preProc","tstamps"], body: async (FileAttachment) => {
+define({id: "0d1770b8", inputs: ["FileAttachment"], outputs: ["paras","spels","displayElem","addSpans","preProc","tstamps"], body: async (FileAttachment) => {
 var paras = {accented: [], normed: []};
 var spels = new Map();
 var displayElem = document.getElementById("display");
-const addSpans = (elemHTML, spelNdx) => {
-  let newText = []; // this will hold html for the new draftSpanned cell
-  let text = elemHTML; // get existing HTML
-  let spelStart = text.search(/\S/); // find the first nonwhitespace
+const addSpans = (supplyHTML, spelNdx) => {
+  let paraSpels = [];
+  let spelStart = supplyHTML.search(/\S/); // find the first nonwhitespace
   while (spelStart != -1) {
-    newText.push(text.substr(0, spelStart)); // grab everything up to that point
-    text = text.substr(spelStart); // put the rest in text
-    let spelEnd = text.search(/\s/); // find where whitespace starts again
-    if (spelEnd == -1) spelEnd = text.length; // text ends with nonwhitespace
+    paraSpels.push(supplyHTML.substr(0, spelStart)); // grab everything up to that point
+    supplyHTML = supplyHTML.substr(spelStart); // put the rest in supplyHTML
+    let spelEnd = supplyHTML.search(/\s/); // find where whitespace starts again
+    if (spelEnd == -1) spelEnd = supplyHTML.length; // supplyHTML ends with nonwhitespace
     // wrap the spel we've found in span tags
-    newText.push(`<span id="s${spelNdx}">` + text.substr(0, spelEnd) + `</span>`); // add this to newText
-    text = text.substr(spelEnd); // put the rest in text
-    spelStart = text.search(/\S/); // find the next nonwhitespace (if any)
+    paraSpels.push(`<span id="s${spelNdx}">` + supplyHTML.substr(0, spelEnd) + `</span>`); // add this to paraSpels
+    supplyHTML = supplyHTML.substr(spelEnd); // put the rest in supplyHTML
+    spelStart = supplyHTML.search(/\S/); // find the next nonwhitespace (if any)
   }
-  return newText;
+  return paraSpels;
 }
 async function preProc() {
   // console.log("preProc"); // DEBUG
@@ -70,7 +69,7 @@ return {paras,spels,displayElem,addSpans,preProc,tstamps};
 </script>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
-<div id="cell-67bf4fa5" class="observablehq observablehq--block"></div>
+<div id="cell-0d1770b8" class="observablehq observablehq--block"></div>
 <h2 style="margin-top: 3vw;">&nbsp;‘<span style="color: black;">l’Image</span>’ in <em>How It Is</em></h2>
 <div id="display"></div></main>
 </div>
