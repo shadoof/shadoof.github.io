@@ -45,15 +45,22 @@ body {
 }
 
 #byline {
+  font-size: 1.6vw;
+  line-height: 1.1;
   z-index: 10;
   padding-top: 1vw;
   padding-left: 5vw;
+  padding-right: 5vw;
   /*font: lighter 1vw/6vw Arial;*/
   font-size: 1.4vw;
   color: gray;
   cursor: pointer;
   opacity: 0;
-  transition: opacity .5s ease-in-out 0s;
+  transition: opacity .7s ease-in-out 0s;
+  -o-transition: opacity .7s ease-in-out;
+  -ms-transition: opacity .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -webkit-transition: opacity .7s ease-in-out;
 }
 
 #byline:hover {
@@ -63,14 +70,18 @@ body {
 #byline a {
   color: gray;
   text-decoration: none;
+  overflow: hidden;
 }
 
 #byline a:hover {
   color: lightgray;
 }
 
-#bytext {
-  vertical-align: top;
+/* Clear floats after the columns */
+#byline:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #display {
@@ -90,6 +101,18 @@ body {
 
 #frame {
   position: relative;
+}
+
+.clmleft {
+  float: left;
+  text-align: left;
+  width: 30%;
+}
+
+.clmright {
+  float: right;
+  text-align: right;
+  width: 70%;
 }
 
 .none {
