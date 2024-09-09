@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Lucky for Some (Taper #13)</title>
+
+  <!-- “Lucky for Some” Copyright (C) 2024 John Cayley
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright 
+notice and this notice are preserved. This file is offered as-is,
+without any warranty.
+
+This is from Taper #13: Superstitions, Fall 2024:
+
+https://taper.badquar.to/13/lucky-for-some.html
+
+This fragment speaks for itself and then shifts in a less than unlucky numeber of phases back and forth from a more fortunate, apotropaic mode of expression, removing unlucky instances of thoughts, words, and letters. Lucky for Some, not necessarily for yours truly. - John
+
+-->
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden
+    }
+
+    a {
+      color: #eee;
+      text-decoration: none
+    }
+
+    header {
+      margin: 0;
+      padding: 0;
+      background-color: #444;
+      color: #bbb;
+      position: relative;
+      z-index: 1000
+    }
+
+    header>h1 {
+      margin: 0;
+      font-size: 12px;
+      font-family: sans-serif;
+      border-bottom: 1px #999 solid;
+      padding: 5px 10px;
+      line-height: 17px
+    }
+  </style>
+</head>
+
+<body>
+  <header id=nav>
+    <h1>
+      <a href="prev.html">&lt;&lt;</a> &nbsp;
+      <a href="index.html">Taper #13 :
+        Superstitions</a> : Fall 2024 &nbsp;
+      <a href="next.html">&gt;&gt;</a><br>
+      <a href="lucky-for-some.html">“Lucky for Some”</a> by
+      <a href="about.html#cayley">John Cayley</a>
+    </h1>
+  </header>
+  <div id=d class=v>
+    <h3 id=h></h3><span id=t></span>
+  </div>
+  <style>
+    #d {
+      height: 50vw;
+      width: 75vw;
+      margin: auto;
+      font-size: 1.8vw;
+      opacity: 0;
+      transition: opacity 3s ease-in-out;
+      -o-transition: opacity 3s ease-in-out;
+      -ms-transition: opacity 3s ease-in-out;
+      -moz-transition: opacity 3s ease-in-out;
+      -webkit-transition: opacity 3s ease-in-out;
+    }
+  </style>
+  <script>
+    hx = 13, pr = new RegExp(/[\.\?]/g);
+    prep = () => {
+      v = "The number thirteen seems to have been lucky for me. We all experience passages of life which are not only caught in the grip of ill-fortune, they are ravaged by trauma and suffering, with bad luck falling haphazardly over all we know or feel or do or say. At times like these, we are sensitized to superstition, and this is often acknowledged in the form of minor rituals intended to be apotropaic: charms, spells, rhymes, sayings for warding off or deflecting the ill-fortune that would otherwise increase and complicate the trauma we’ve deserved. Like the single magpie, thirteen is a creature that appears irregularly during such passages of suffering. When we encounter it, we must either turn away or make some gesture to avert a malevolent touch. I may not be at all superstitious but once I have learned (from my mother) that there is some haphazard thing to be avoided or something that I can do to mitigate the harm this creature heralds, then, even if I will not concede its necessity rationally, how shall I fail to do what I have learned? How can I refuse myself a simple gesture that many more of us tell me may do something to alleviate the suffering I deserve, a tiny effort potentially yielding powerful if short-lived relief and slightly better fortune? I was told to spit if I saw a single magpie and to crush eggshell halves because they are not stable vessels; to crush them decreases the precarity of those (my father) at sea. If there were ever free will, what is it, if it never brings me to a moment in my life when I will not spit or crush? Should I count my thoughts or words or letters and never let them get beyond a dozen? Wouldn’t, shortly, my every next thought become a thirteenth pretending it was just a fortunate, innocent first? I am reaching the fateful thought as I write this. And because it is lucky for some, yours truly amongst them, then this fleeting period may be my only happy thought.", t = ["", v];
+      ts = v.split(pr),
+        pn = v.match(pr);
+      if (ts.length == hx + 1) {
+        ts.splice(-2);
+        ts = ts.map((t, i) => t + pn[i]);
+        v = ts.join(" ");
+      }
+      t.push(v);
+      for (let index = 0; index < hx - 3; ++index) {
+        v = cl(cw(v));
+        t.push(v);
+      }
+      return t;
+    }
+    g = (e) => document.getElementById(e);
+    df = async (
+      tx,
+      dn,
+      rf = 1000, // DEBUG
+      ff = 750,
+      d = g("d"),
+      h = g("h"),
+      t = g("t"),
+      f = 1.8
+    ) => {
+      //
+      h.innerText = dn;
+      t.innerText = tx;
+      console.log(t.style.fontSize); // DEBUG
+      t.style.fontSize = `${dn > 2 ? f * (1 + (dn - 1) * 0.065) : f}vw`
+      d.style.opacity = 1;
+      await s(dn == 1 ? rf * 2 : rf);
+      d.style.opacity = 0;
+      await s(ff);
+    }
+    cl = (t, c = "", ac = 0) => {
+      for (let i = 0; i < t.length; i++) {
+        if (t[i].match(/[a-z]/i)) {
+          ac++;
+          if (ac % hx !== 0) {
+            c += t[i];
+          }
+        } else {
+          c += t[i];
+        }
+      }
+      return c;
+    }
+    cw = (t, w = t.split(" "), c = []) => {
+      for (let i = 0; i < w.length; i++) {
+        if ((i + 1) % hx !== 0) {
+          c.push(w[i]);
+        } else {
+          let l = w[i].slice(-1),
+            p = c[c.length - 1];
+          if (p && !l.match(/\w/))
+            c[c.length - 1] = p += p[p.length - 1].match(/\w/)
+              ? l
+              : "";
+        }
+      }
+      return c.join(" ");
+    }
+    s = (t) => new Promise(s => setTimeout(s, t));
+    (async (t = prep(), i = 0, dir = 1, a = true, l = 24, c = 0) => {
+      while (a || ++c < l) {
+        i += dir;
+        await df(t[i], i);
+        if (i == t.length - 1) dir = -1;
+        else if (i == 1) dir = 1;
+      }
+    })()
+  </script>
+</body>
+
+</html>

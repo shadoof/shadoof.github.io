@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Lucky for Some (Taper #13)</title>
+
+  <!-- “Lucky for Some” Copyright (C) 2024 John Cayley
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright 
+notice and this notice are preserved. This file is offered as-is,
+without any warranty.
+
+This is from Taper #13: Superstitions, Fall 2024:
+
+https://taper.badquar.to/13/lucky-for-some.html
+
+This fragment speaks for itself and then shifts in a less than unlucky numeber of phases back and forth from a more fortunate, apotropaic mode of expression, removing unlucky instances of thoughts, words, and letters. Lucky for Some, not necessarily for yours truly. - John
+
+-->
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden
+    }
+
+    a {
+      color: #eee;
+      text-decoration: none
+    }
+
+    header {
+      margin: 0;
+      padding: 0;
+      background-color: #444;
+      color: #bbb;
+      position: relative;
+      z-index: 1000
+    }
+
+    header>h1 {
+      margin: 0;
+      font-size: 12px;
+      font-family: sans-serif;
+      border-bottom: 1px #999 solid;
+      padding: 5px 10px;
+      line-height: 17px
+    }
+  </style>
+</head>
+
+<body>
+  <header id=nav>
+    <h1>
+      <a href="prev.html">&lt;&lt;</a> &nbsp;
+      <a href="index.html">Taper #13 :
+        Superstitions</a> : Fall 2024 &nbsp;
+      <a href="next.html">&gt;&gt;</a><br>
+      <a href="lucky-for-some.html">“Lucky for Some”</a> by
+      <a href="about.html#cayley">John Cayley</a>
+    </h1>
+  </header>
+<div id=d class=v><h3 id=h></h3><span id=t></span></div>
+<style>#d{height:50vw;width:75vw;margin:auto;font-size:1.8vw;opacity:0;transition:opacity 3s ease-in-out}</style>
+<script>hx=13,pr=new RegExp(/[\.\?]/g)
+prep=()=>{v="Thirteen has been lucky for me. Passages of life are gripped by ill fortune, ravaged by trauma, bad luck falling over all we know, feel, do or say. We are sensitized to superstition, surfacing as apotropaic ritual: spells to turn away ill luck, spiking our suffering. Like a magpie, thirteen arrives. We must make some gesture to avert its touch. I am not superstitious but once mother does some little thing to mitigate the harm, how shall I fail to do the same? How refuse myself what might alleviate the suffering I deserve, a tiny effort promising relief? I was told to spit for a magpie and crush eggshell halves’ unstable boats to prevent their precarious use by those (my dad) at sea. If there’s free will, why do I still spit and crush? Count thoughts, words, letters: never let them pass a dozen? Every next thought is a thirteenth pretending to be an innocent first? I reach the fateful thought in writing. If it is lucky for some, then this fleeting period may be my only happy thought.",t=[,v];
+u=v.split(pr),pn=v.match(pr)
+if(u.length==hx+1){u.splice(-2);u=u.map((t,i)=>t+pn[i]);v=u.join(" ")}
+t.push(v)
+for(let index=0;index<hx-3;++index){v=m(k(v));t.push(v)}return t}
+g=(e)=>document.getElementById(e);
+q=async(tx,dn,rf=10000,ff=3500,d=g("d"),h=g("h"),t=g("t"),f=1.8)=>{h.innerText=dn;t.innerText=tx;t.style.fontSize=`${dn>2?f*(1+(dn-1)*0.065):f}vw`;d.style.opacity=1;await s(dn==1?rf*2:rf);d.style.opacity=0;await s(ff)}
+m=(t,c="",ac=0)=>{for(i=0;i<t.length;i++){if(t[i].match(/[a-z]/i)){if(++ac%hx!==0){c+=t[i]}}else{c+=t[i]}}return c}
+k=(t,w=t.split(" "),c=[])=>{for(i=0;i<w.length;i++){if((i+1)%hx!==0){c.push(w[i])}else{l=w[i].slice(-1),p=c[c.length-1];if(p&&!l.match(/\w/))c[c.length-1]=p+=p[p.length-1].match(/\w/)?l:""}}return c.join(" ")}
+s=(t)=>new Promise(s=>setTimeout(s,t));
+(async(t=prep(),i=0,dir=1)=>{while(true){i+=dir;await q(t[i],i);if(i==t.length-1)dir=-1;else if(i==1)dir=1}})()</script></body></html>
