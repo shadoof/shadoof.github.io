@@ -119,7 +119,8 @@ for(l of f){
 m="";
 l=l.split("");
 for([i,w] of l.entries()){
-n=w=="0"?z[r(z.length)]:o[r(o.length)]
+v=r(4)==0?"1":"0"
+n=w==v?z[r(z.length)]:o[r(o.length)]
 n=n=="lone"&&h()?"a"+n:n
 b=n.split(" ").length==2
 m+=n+(i==1&&r(5)==0||i==1&&b?",":"")
