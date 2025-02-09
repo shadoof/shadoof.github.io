@@ -122,13 +122,13 @@ f=["1000",
 o=["one","one body","whole","entire","joined","bound","lone","union","thou","thine","thou","us","ours","I","mine","myself","thyself","my self","thy self","ourselves","ourself","our selves"]
 z=["nothing","naught","nought","cipher","zero","null","no one","void","no body","no thing","never","love"]
 t=[]
-p=""
 v="0" // v=r(4)==0?"1":"0" - would, .25 times, invert valence
 for(l of f){
-m="";
+m="",p=""
 l=l.split("");
 for([i,w] of l.entries()){
 do{n=w==v?z[r(z.length)]:o[r(o.length)]}while(n=="I"&&p=="I")
+p=n
 n=n=="lone"&&h()?"a"+n:n
 b=n.split(" ").length==2
 m+=n+(i==1&&r(5)==0||i==1&&b?",":"")
