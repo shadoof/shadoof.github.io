@@ -115,11 +115,11 @@ f=["1000",
 o=["one","one body","whole","entire","joined","bound","lone","union","thou","thine","thou","us","ours","I","mine","myself","thyself","my self","thy self","ourselves","ourself","our selves"]
 z=["nothing","naught","nought","cipher","zero","null","no one","void","no body","no thing","never","love"]
 t=[]
+v=r(4)==0?"1":"0" // valence
 for(l of f){
 m="";
 l=l.split("");
 for([i,w] of l.entries()){
-v=r(4)==0?"1":"0"
 n=w==v?z[r(z.length)]:o[r(o.length)]
 n=n=="lone"&&h()?"a"+n:n
 b=n.split(" ").length==2
