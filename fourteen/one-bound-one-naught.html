@@ -119,7 +119,7 @@ for(l of f){
 m="";
 l=l.split("");
 for([i,w] of l.entries()){
-n=w==="0"?z[r(z.length)]:o[r(o.length)]
+n=w=="0"?z[r(z.length)]:o[r(o.length)]
 n=n=="lone"&&h()?"a"+n:n
 b=n.split(" ").length==2
 m+=n+(i==1&&r(5)==0||i==1&&b?",":"")
@@ -135,7 +135,7 @@ for([i,l] of t.entries()){
 l+=","
 z=l.slice(0,-1)
 l=i%2!=0&&h()||i==13?z+".":l
-l=i==7||i==11?z+":":l
+l=(i==7||i==11)&&h()?z+":":l
 l=i>11?"   "+l:l
 t[i]=l
 }
