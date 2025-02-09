@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>One Bound One Naught (Taper #14)</title>
+
+<!-- “Title” Copyright (C) 2024 Author
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright 
+notice and this notice are preserved. This file is offered as-is,
+without any warranty.
+
+This is from Taper #14: Sonnets, Spring 2025:
+
+https://taper.badquar.to/14/one-bound-one-naught.html
+
+A ‘Shakespearean’ sonnet on refresh
+with underlying binary form and ‘rhyme.’
+
+The form is:
+
+1110   => 14, title, taken from line 12.
+
+1000   => 8 +
+0110   => 6 = 14 (and 8 + 6 lines);
+0111   => 7 x
+0010   => 2 couplets. Next 4:
+0100   => 4,
+0101   => 3,
+0010   => 2,
+0001   => 1.
+0111   => 7 x
+0010   => 2 (again).
+0001   => 1 x
+1110   => 14.
+  1010 => 10 +
+  0100 => 4.
+
+yielding a ‘rhyme’ scheme of aaba abab baba aa.
+
+The love has been somewhat lost in the labour (and
+constraint), and yet this seems appropriate with respect
+to the Shakepearean allusion. The reader is invited
+to apply their CCS acumen for further interpretation.
+
+Refresh for a new sonnet ... and please, enjoy – John
+-->
+
+<style>
+	body { margin:0 ; overflow:hidden }
+	a { color:#eee ; text-decoration:none }
+	header { margin:0 ; padding:0 ; background-color:#444 ; color:#bbb ;
+		position:relative ; z-index:1000 }
+	header > h1 { margin:0 ; font-size:12px ; font-family:sans-serif ;
+		border-bottom:1px #999 solid ; padding:5px 10px ; line-height:17px }
+</style>
+</head>
+<body>
+<header id="nav">
+	<h1>
+		<a href="prev.html">&lt;&lt;</a> &nbsp; 
+		<a href="index.html">Taper #14 :
+		TBA</a> : Spring 2025 &nbsp; 
+		<a href="next.html">&gt;&gt;</a><br>
+		<a href="one-bound-one-naught.html">“One Bound One Naught [Fourteen]”</a> by
+		<a href="about.html#authorlastname">John Cayley</a>
+	</h1>
+</header>
+<style>
+#d {
+color: black;
+background-color: ivory;
+padding: 0 10vw;
+white-space: pre;
+height: 80vw;
+width: 34vw;
+margin: auto;
+font-size: 1.8vw;
+line-height: 2.4vw;
+opacity: 0;
+transition: opacity 5s ease-in-out;
+-o-transition: opacity 5s ease-in-out;
+-ms-transition: opacity 5s ease-in-out;
+-moz-transition: opacity 5s ease-in-out;
+-webkit-transition: opacity 5s ease-in-out
+}
+#t {margin-left: 2.4vw}
+#h {letter-spacing: .08vw}
+</style>
+<div id=d>
+<h3 id=h>&nbsp;</h3>
+<div id=t></div>
+</div>
+<script>
+g=e=>document.getElementById(e)
+r=m=>Math.floor(Math.random()*m)
+h=()=>r(2)==0
+s=t=>new Promise(s=>setTimeout(s,t));
+u=s=>s.charAt(0).toUpperCase()+s.slice(1)
+f=["1000",
+"0110",
+"0111",
+"0010",
+"0100",
+"0101",
+"0010",
+"0001",
+"0111",
+"0010",
+"0001",
+"1110",
+"1010",
+"0100"]
+o=["one","one body","whole","entire","joined","bound","lone","union","thou","thine","thou","us","ours","I","mine","myself","thyself","my self","thy self","ourselves","ourself","our selves"]
+z=["nothing","naught","nought","cipher","zero","null","no one","void","no body","no thing","never","love"]
+t=[]
+for(l of f){
+m="";
+l=l.split("");
+for([i,w] of l.entries()){
+n=w==="0"?z[r(z.length)]:o[r(o.length)]
+n=n=="lone"&&h()?"a"+n:n
+b=n.split(" ").length==2
+m+=n+(i==1&&r(5)==0||i==1&&b?",":"")
+m+=((i==0||i==2)&&b&&h()?",":"")
+m+=" "
+}
+t.push(m.trim())
+}
+tf=t[11]
+g("h").innerText = tf.split(" ").map(w=>u(w)).join(" ")
+t=t.map(w=>u(w))
+for([i,l] of t.entries()){
+l+=","
+z=l.slice(0,-1)
+l=i%2!=0&&h()||i==13?z+".":l
+l=i==7||i==11?z+":":l
+l=i>11?"   "+l:l
+t[i]=l
+}
+g("t").innerText = t.join("\n");
+(async ()=>{await s(100)
+g("d").style.opacity = 1})()
+</script>
+</body>
+</html>
