@@ -41,7 +41,7 @@ yielding a ‘rhyme’ scheme of aaba abab baba aa.
 
 The love has been somewhat lost in the labour (and
 virtuous constraint), and yet this seems appropriate
-given the Shakepearean allusion.
+given the allusion to Shakepeare.
   The reader is invited to apply a little CCS acumen
 to further interpretation.
 
@@ -52,6 +52,7 @@ who made contact with The Bard and asked him for his
 favorite line, the reply being:
 "Never, never, never, never, never.—"
 _King Lear_ Act 5, scene 3, 372
+
 -->
 
 <style>
@@ -76,24 +77,24 @@ _King Lear_ Act 5, scene 3, 372
 </header>
 <style>
 #d {
-color: black;
-background-color: ivory;
-padding: 0 10vw;
-white-space: pre;
-height: 80vw;
-width: 34vw;
-margin: auto;
-font-size: 1.8vw;
-line-height: 2.4vw;
-opacity: 0;
-transition: opacity 5s ease-in-out;
--o-transition: opacity 5s ease-in-out;
--ms-transition: opacity 5s ease-in-out;
--moz-transition: opacity 5s ease-in-out;
--webkit-transition: opacity 5s ease-in-out
+color:black;
+background-color:ivory;
+padding:0 10vw;
+white-space:pre;
+height:80vw;
+width:34vw;
+margin:auto;
+font-size:1.8vw;
+line-height:2.4vw;
+opacity:0;
+transition:opacity 5s ease-in-out;
+-o-transition:opacity 5s ease-in-out;
+-ms-transition:opacity 5s ease-in-out;
+-moz-transition:opacity 5s ease-in-out;
+-webkit-transition:opacity 5s ease-in-out
 }
-#t {margin-left: 2.4vw}
-#h {letter-spacing: .08vw}
+#t {margin-left:2.4vw}
+#h {letter-spacing:.08vw}
 </style>
 <div id=d>
 <h3 id=h>&nbsp;</h3>
@@ -122,11 +123,11 @@ f=["1000",
 o=["one","one body","whole","entire","joined","bound","lone","union","thou","thine","thou","us","ours","I","mine","myself","thyself","my self","thy self","ourselves","ourself","our selves"]
 z=["nothing","naught","nought","cipher","zero","null","no one","void","no body","no thing","never","love"]
 t=[]
-v="0" // v=r(4)==0?"1":"0" - would, .25 times, invert valence
+v="0"//v=r(4)==0?"1":"0" -would, 1/4 times, invert valence
 for(l of f){
 m="",p=""
 l=l.split("");
-for([i,w] of l.entries()){
+for([i,w]of l.entries()){
 do{n=w==v?z[r(z.length)]:o[r(o.length)]}while(n=="I"&&p=="I")
 p=n
 n=n=="lone"&&h()?"a"+n:n
@@ -140,17 +141,17 @@ t.push(m.trim())
 tf=t[11]
 g("h").innerText = tf.split(" ").map(w=>u(w)).join(" ")
 t=t.map(w=>u(w))
-for([i,l] of t.entries()){
+for([i,l]of t.entries()){
+z=l
 l+=","
-z=l.slice(0,-1)
 l=i%2!=0&&h()||i==13?z+".":l
 l=(i==7||i==11)&&h()?z+":":l
 l=i>11?"   "+l:l
 t[i]=l
 }
-g("t").innerText = t.join("\n");
+g("t").innerText=t.join("\n");
 (async ()=>{await s(100)
-g("d").style.opacity = 1})()
+g("d").style.opacity=1})()
 </script>
 </body>
 </html>
