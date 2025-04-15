@@ -15,7 +15,7 @@ This is from Taper #14: Sonnets, Spring 2025:
 
 https://taper.badquar.to/14/one-bound-one-naught.html
 
-‘Shakespearean’ sonnets, on refresh,
+‘Shakespearean’ sonnets, click for another,
 each with underlying binary form and ‘rhyme.’
 
 The form is:
@@ -45,7 +45,7 @@ given the allusion to Shakepeare.
   The reader is invited to apply a little CCS acumen
 to further interpretation.
 
-Refresh for a new sonnet ... and please: enjoy – John
+Click (upper left) for a new sonnet ... and please: enjoy – John
 
 PS: Inspired, in part, by a tale of ouija boarders
 who made contact with The Bard and asked him for his
@@ -76,9 +76,9 @@ _King Lear_ Act 5, scene 3, 372
 	</h1>
 </header>
 <style>
+body {background-color: ivory}
 #d {
 color:black;
-background-color:ivory;
 padding:0 10vw;
 white-space:pre;
 height:80vw;
@@ -87,15 +87,16 @@ margin:auto;
 font-size:1.8vw;
 line-height:2.4vw;
 opacity:0;
-transition:opacity 5s ease-in-out;
--o-transition:opacity 5s ease-in-out;
--ms-transition:opacity 5s ease-in-out;
--moz-transition:opacity 5s ease-in-out;
--webkit-transition:opacity 5s ease-in-out
+transition:opacity 3s ease-in-out;
+-o-transition:opacity 3s ease-in-out;
+-ms-transition:opacity 3s ease-in-out;
+-moz-transition:opacity 3s ease-in-out;
+-webkit-transition:opacity 3s ease-in-out
 }
 #t {margin-left:2.4vw}
-#h {letter-spacing:.08vw}
+#h {letter-spacing:.08vw; margin:0}
 </style>
+<p><input id=b type=button value='Click for another "1110 [Fourteen]"' onclick=j() style=height:1.7vw;margin-left:2vw></p>
 <div id=d>
 <h3 id=h>&nbsp;</h3>
 <div id=t></div>
@@ -106,6 +107,9 @@ r=m=>Math.floor(Math.random()*m)
 h=()=>r(2)==0
 s=t=>new Promise(s=>setTimeout(s,t));
 u=s=>s.charAt(0).toUpperCase()+s.slice(1)
+y=async(o)=>{await s(100)
+g("d").style.opacity=o}
+j=async()=>{y(0);await s(3200);x();y(1)}
 f=["1000",
 "0110",
 "0111",
@@ -122,10 +126,12 @@ f=["1000",
 "0100"]
 o=["one","one body","whole","entire","joined","bound","lone","union","thou","thine","thou","us","ours","I","mine","myself","thyself","my self","thy self","ourselves","ourself","our selves"]
 z=["nothing","naught","nought","cipher","zero","null","no one","void","no body","no thing","never","love"]
-t=[]
 v="0"//v=r(4)==0?"1":"0" -would, 1/4 times, invert valence
+x=()=>{
+t=[]
+tf=""
 for(l of f){
-m="",p=""
+m="",p="",n=""
 l=l.split("");
 for([i,w]of l.entries()){
 do{n=w==v?z[r(z.length)]:o[r(o.length)]}while(n=="I"&&p=="I")
@@ -138,20 +144,21 @@ m+=" "
 }
 t.push(m.trim())
 }
-tf=t[11]
-g("h").innerText = tf.split(" ").map(w=>u(w)).join(" ")
 t=t.map(w=>u(w))
+tf=t[11]
 for([i,l]of t.entries()){
-z=l
+c=l
 l+=","
-l=i%2!=0&&h()||i==13?z+".":l
-l=(i==7||i==11)&&h()?z+":":l
+l=i%2!=0&&h()||i==13?c+".":l
+l=(i==7||i==11)&&h()?c+":":l
 l=i>11?"   "+l:l
 t[i]=l
 }
-g("t").innerText=t.join("\n");
-(async ()=>{await s(100)
-g("d").style.opacity=1})()
+g("h").innerText = tf.split(" ").map(w=>u(w)).join(" ")
+g("t").innerText=t.join("\n")
+}
+x();
+y(1)
 </script>
 </body>
 </html>
