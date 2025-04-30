@@ -34,8 +34,8 @@
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@shadoof/carhartt.js?v=3";
 (new Runtime).module(define, name => {
-  if (name === "play") return Inspector.into(".play")();
-  if (name === "textcontainer") return Inspector.into(".textcontainer")();
+  if (name === "loop") return Inspector.into(".play")();
+  if (name === "quatrain") return Inspector.into(".textcontainer")();
 });
 </script>
 </html>
