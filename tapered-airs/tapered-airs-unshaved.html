@@ -157,25 +157,40 @@ let us
     yy = i('f')
     ff = yy.value;
     ii(yy, () => { ff = yy.value })
-    t = (w, i, s) => { j = w.match(/[aeiouy,:;\.\?]/gi); if (j) g[i] = (300 + j.length * 150) / f; if (i - 1 > -1) g[i - 1] += (s.length * 75) / f }
+    t = (w, i, s) => {
+      // Count vowels plus selected punctuation to weight reading time.
+      j = w.match(/[aeiouy,:;\.\?]/gi);
+
+      // Base delay is 300ms, plus 150ms per matched character, scaled by rate.
+      if (j) g[i] = (300 + j.length * 150) / f;
+
+      // Add delay from leading whitespace to the previous word's display time.
+      if (i - 1 > -1) g[i - 1] += (s.length * 75) / f;
+    }
     r = (t) => new Promise(r => setTimeout(r, t))
     v = (e) => e.classList.remove("i")
     u = (e) => e.classList.add("i")
     a = () => {
       let h = '', i = 0, o = n, s = o.search(/\S/);
       while (s != -1) {
+        // Preserve leading whitespace before the next visible word.
         let r = o.substr(0, s);
         h += r;
+        // Advance to the next non-space character.
         o = o.substr(s);
+        // Find the end of the next word (or run to end of string).
         l = o.search(/\s/);
         if (l == -1) l = o.length;
+        // Extract one word token and wrap it for fade/animation control.
         w = o.substr(0, l);
         h += `<span>${w}</span>`;
+        // Store timing for this word, including delay from preceding spaces.
         t(w, i++, r);
-        // i++;
+        // Move past the processed word and continue scanning.
         o = o.substr(l);
         s = o.search(/\S/);
       }
+      // Render parsed text with word-level span wrappers.
       d.innerHTML = h;
     }
     a();
