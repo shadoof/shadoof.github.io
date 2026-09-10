@@ -1,0 +1,184 @@
+<!doctype html>
+<notebook theme="air">
+  <title>reading</title>
+  <script id="0" type="text/markdown" hidden="">
+    # reading
+    https://work.programmatology.com/reading
+  </script>
+  <script id="5" type="module">
+    // Renamed from `display` (which OJS could safely shadow) to `stage`,
+    // since in JS cells the identifier `display` always refers to the
+    // built-in display() function.
+    const stage = html`<div id="frame">
+    <div id="display" class="bug">${spannedWord}</div>
+    </div>`;
+    display(stage);
+  </script>
+  <script id="120" type="module" hidden="">
+    const period = 0.25;
+  </script>
+  <script id="126" type="module" hidden="">
+    const shadowColor = "DarkRed"; // DarkRed
+  </script>
+  <script id="245" type="module" hidden="">
+    const shadowExtent = "1ch";
+  </script>
+  <script id="182" type="module" hidden="">
+    const word = "reading";
+  </script>
+  <script id="184" type="module" hidden="">
+    const spannedWord = word.split("").map((char, id) => html`<span id="${id}" class="">${char}</span>`);
+  </script>
+  <script id="78" type="module" hidden="">
+    stage.querySelector("#display")
+      .addEventListener("animationiteration", listener, false);
+  </script>
+  <script id="301" type="module" hidden="">
+    // Public, reactive mirrors of `line`/`iters`, built with Generators.observe
+    // (the plain-JS alternative to OJS's `mutable`). These are *written to* by
+    // `listener`, but never *read* by it — that one-way flow is what lets other
+    // cells reactively display the current line/iteration count without ever
+    // causing `listener` itself to be redefined (which would otherwise cause
+    // cell 78 to re-attach the animationiteration event listener over and over).
+    let setCurrentLine, setCurrentIters;
+    const currentLine = Generators.observe((change) => {
+      setCurrentLine = change;
+      change(line.value);
+    });
+    const currentIters = Generators.observe((change) => {
+      setCurrentIters = change;
+      change(iters.value);
+    });
+  </script>
+  <script id="206" type="module" hidden="">
+    const listener = event => {
+      let elem = 0;
+      if (event.type == "animationiteration" && event.target.id == "display") {
+        iters.value = (iters.value + 1) % 2;
+        setCurrentIters(iters.value); // push to reactive mirror
+        // console.log(
+        //   event.elapsedTime + ": " + event.target.id + ": " + iters.value
+        // );
+        if (iters.value % 2 != 0) {
+          // console.log("do something to: " + score[line.value]);
+          for (let l = 0; l < word.length; l++) {
+            elem = document.getElementById(l);
+            if (!Array.from(elem.classList).includes("fadeInOut")) {
+              elem.classList.add("fadeInOut");
+            }
+            if (score[line.value].includes(l)) {
+              elem.classList.remove("fadeInOut");
+            }
+          }
+          line.value = (line.value + 1) % score.length;
+          setCurrentLine(line.value); // push to reactive mirror
+        }
+      }
+    };
+  </script>
+  <script id="199" type="text/markdown" hidden="">
+    reading, ring, read, a din in red, read
+
+    `r=0 e=1 a=2 d=3 i=4 n=5 g=6`
+  </script>
+  <script id="286" type="module" hidden="">
+    const score = [
+      [],
+      [1, 2, 3],
+      [4, 5, 6],
+      [0, 1, 3, 4, 5, 6],
+      [0, 1, 2, 6],
+      [0, 1, 2, 3, 6],
+      [2, 4, 5, 6],
+      [4, 5, 6]
+    ];
+  </script>
+  <script id="292" type="module" hidden="">
+    // Converted from `mutable line = 0;` — plain JS has no mutable-cell primitive,
+    // so we use a mutable ref object that the listener cell updates in place.
+    const line = {value: 0};
+  </script>
+  <script id="234" type="module" hidden="">
+    // Converted from `mutable iters = 0`
+    const iters = {value: 0};
+  </script>
+  <script id="8" type="module" hidden="">
+    const css = html`<style>
+      @font-face {
+        font-family: SourceCodePro-ExtraLight;
+        src: url('${await sourceCodeProEL.url()}');
+      }
+
+    #frame {
+      font-family: SourceCodePro-ExtraLight, monospace;
+      font-size: 14vw;
+    	line-height: 1.15em;
+      position: fixed; /* fixed so main's padding/max-width don't offset it; on observable site should be: relative*/
+    	min-width: 100vw;
+    	min-height: calc(1.2em * 3);
+    	border: none;
+    	padding: none;
+    	margin: none;
+      overflow: hidden;
+    }
+
+    #display {
+    	position: absolute;
+      height: calc(1.2em * 2);
+    	min-width: 100vw;
+      letter-spacing: .5ch;
+      text-align: center;
+      border: none;
+      padding-top: 18vw;
+      overflow: hidden;
+      color: white;
+      /* text-shadow: 0 0 .25ch ${shadowColor}; */
+      /* transition: text-shadow ${period}s ease-in-out; */
+    }
+
+    .bug {
+      animation-name: bug;
+      animation-duration: ${period}s;
+      animation-iteration-count: infinite;
+    }
+
+    .fadeInOut {
+      animation-name: shadowInOut, bug;
+      animation-duration: ${period}s;
+      animation-timeing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes bug {
+      from {
+        z-index: 1;
+      }
+
+      to {
+        z-index: 2;
+      }
+    }
+
+    @keyframes shadowInOut {
+      from {
+        text-shadow: 0 0 0 white;
+      }
+
+      to {
+        text-shadow: 0 0 ${shadowExtent} ${shadowColor};
+      }
+    }
+
+    </style>`;
+    display(css);
+  </script>
+  <script id="12" type="module" hidden="">
+    // Converted from OJS cross-notebook import `import { sourceCodeProEL } from "@shadoof/fonts"`.
+    // Plain JS `import` cannot resolve Observable notebook slugs, so we recreate
+    // a minimal FileAttachment-like object pointing at the same underlying font file.
+    const sourceCodeProEL = {
+      url: async () => "https://static.observableusercontent.com/files/724d1ff5819c7c613cfab50cd1db962c0f98331dbfff9a8c6322ac11a7f5e19f9d8372c9fbd2c998f2ce19a849746bc039744f0aa881d0eb6522732ddb4fd258"
+    };
+  </script>
+</notebook>
