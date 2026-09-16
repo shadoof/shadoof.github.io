@@ -104,9 +104,13 @@
   </script>
   <script id="8" type="module" hidden="">
     const css = html`<style>
+      @font-face {
+        font-family: SourceCodePro-ExtraLight;
+        src: url('${await sourceCodeProEL.url()}');
+      }
+
     #frame {
-      font-family: "Source Code Pro Variable", monospace;
-      font-weight: 200;
+      font-family: SourceCodePro-ExtraLight, monospace;
       font-size: 14vw;
     	line-height: 1.15em;
       position: fixed; /* fixed so main's padding/max-width don't offset it; on observable site should be: relative*/
@@ -168,5 +172,13 @@
 
     </style>`;
     display(css);
+  </script>
+  <script id="12" type="module" hidden="">
+    // Converted from OJS cross-notebook import `import { sourceCodeProEL } from "@shadoof/fonts"`.
+    // Plain JS `import` cannot resolve Observable notebook slugs, so we recreate
+    // a minimal FileAttachment-like object pointing at the same underlying font file.
+    const sourceCodeProEL = {
+      url: async () => "https://static.observableusercontent.com/files/724d1ff5819c7c613cfab50cd1db962c0f98331dbfff9a8c6322ac11a7f5e19f9d8372c9fbd2c998f2ce19a849746bc039744f0aa881d0eb6522732ddb4fd258"
+    };
   </script>
 </notebook>
